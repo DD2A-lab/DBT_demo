@@ -1,0 +1,141 @@
+[0m12:11:24.436112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDC74ED50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDC722C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDC74E950>]}
+
+
+============================== 12:11:24.453696 | f389c715-1c15-47a1-a6de-984b91a8cf5a ==============================
+[0m12:11:24.453696 [info ] [MainThread]: Running with dbt=1.6.17
+[0m12:11:24.462193 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:11:24.467180 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\fajlh\OneDrive\Documents\DBT_demo\DBT_demo\Dummy_generated\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:11:24.476155 [debug] [MainThread]: Command `dbt deps` failed at 12:11:24.475159 after 0.11 seconds
+[0m12:11:24.478152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDC7AFD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDCFE3F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028FDC48ACD0>]}
+[0m12:11:24.480143 [debug] [MainThread]: Flushing usage events
+[0m12:15:27.218171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B6C453D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B6822850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B636C6D0>]}
+
+
+============================== 12:15:27.231417 | 6a5bd739-955a-4728-acbd-10d454c46d16 ==============================
+[0m12:15:27.231417 [info ] [MainThread]: Running with dbt=1.6.17
+[0m12:15:27.234407 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt deps', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:15:27.405449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B660B710>]}
+[0m12:15:27.415461 [debug] [MainThread]: Set downloads directory='C:\Users\fajlh\AppData\Local\Temp\dbt-downloads-5ne8aui7'
+[0m12:15:27.420452 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:15:27.592017 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:15:27.595009 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:15:27.713486 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:15:27.721465 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m12:15:39.201401 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m12:15:39.215363 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m12:15:39.338034 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m12:15:39.345015 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt_faker.git 979d311c388461b63a6e869ef41cb439"
+[0m12:15:41.187237 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:41.188235 [debug] [MainThread]: STDERR: "b"Cloning into '979d311c388461b63a6e869ef41cb439'...\n""
+[0m12:15:41.189232 [debug] [MainThread]: Pulling new dependency 979d311c388461b63a6e869ef41cb439.
+[0m12:15:41.190231 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:15:41.237742 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:15:41.238735 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:41.239732 [debug] [MainThread]: Checking out revision main.
+[0m12:15:41.240731 [debug] [MainThread]: Executing "git remote set-branches origin main"
+[0m12:15:41.283560 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:41.284558 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:41.285555 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags main"
+[0m12:15:42.670118 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:42.671118 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt_faker\n * branch            main       -> FETCH_HEAD\n'"
+[0m12:15:42.672116 [debug] [MainThread]: Executing "git tag --list"
+[0m12:15:42.704962 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:42.705958 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:42.706956 [debug] [MainThread]: Executing "git reset --hard origin/main"
+[0m12:15:42.765356 [debug] [MainThread]: STDOUT: "b'HEAD is now at 72562f8 Merge pull request #27 from Datateer/support-faker-provider-parameters\n'"
+[0m12:15:42.768349 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:42.769346 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:15:42.804253 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:15:42.806261 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:42.807246 [debug] [MainThread]: Checked out at 72562f8.
+[0m12:15:42.809240 [warn ] [MainThread]: [33mWARNING: The git package "https://github.com/dbt-labs/dbt_faker.git" 
+	is None.
+	This can introduce breaking changes into your project without warning!
+
+See https://docs.getdbt.com/docs/package-management#section-specifying-package-versions[0m
+[0m12:15:42.824114 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m12:15:42.933095 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m12:15:42.974983 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt_faker.git 979d311c388461b63a6e869ef41cb439"
+[0m12:15:43.070726 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:43.072724 [debug] [MainThread]: STDERR: "b"fatal: destination path '979d311c388461b63a6e869ef41cb439' already exists and is not an empty directory.\n""
+[0m12:15:43.074716 [debug] [MainThread]: command return code=128
+[0m12:15:43.078704 [debug] [MainThread]: Updating existing dependency 979d311c388461b63a6e869ef41cb439.
+[0m12:15:43.081697 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:15:43.120593 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:15:43.122587 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:43.124591 [debug] [MainThread]: Checking out revision main.
+[0m12:15:43.125580 [debug] [MainThread]: Executing "git remote set-branches origin main"
+[0m12:15:43.169513 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:43.170509 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:43.171507 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags main"
+[0m12:15:44.562240 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:44.562240 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt_faker\n * branch            main       -> FETCH_HEAD\n'"
+[0m12:15:44.564235 [debug] [MainThread]: Executing "git tag --list"
+[0m12:15:44.597145 [debug] [MainThread]: STDOUT: "b''"
+[0m12:15:44.597145 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:44.598145 [debug] [MainThread]: Executing "git reset --hard origin/main"
+[0m12:15:44.645278 [debug] [MainThread]: STDOUT: "b'HEAD is now at 72562f8 Merge pull request #27 from Datateer/support-faker-provider-parameters\n'"
+[0m12:15:44.647270 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:44.648268 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:15:44.676192 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:15:44.677190 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:44.678188 [debug] [MainThread]: Already at 72562f8, nothing to do.
+[0m12:15:44.680182 [warn ] [MainThread]: [33mWARNING: The git package "https://github.com/dbt-labs/dbt_faker.git" 
+	is None.
+	This can introduce breaking changes into your project without warning!
+
+See https://docs.getdbt.com/docs/package-management#section-specifying-package-versions[0m
+[0m12:15:44.684173 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:15:55.391403 [info ] [MainThread]: Installed from version 1.0.0
+[0m12:15:55.394395 [info ] [MainThread]: Updated version available: 1.2.0
+[0m12:15:55.396390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B68361D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B636C250>]}
+[0m12:15:55.398386 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m12:16:06.506571 [info ] [MainThread]: Installed from version 0.8.5
+[0m12:16:06.508563 [info ] [MainThread]: Updated version available: 0.10.3
+[0m12:16:06.510557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B729F650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B729DE10>]}
+[0m12:16:06.512553 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m12:16:16.927808 [info ] [MainThread]: Installed from version 0.9.0
+[0m12:16:16.931797 [info ] [MainThread]: Updated version available: 0.12.1
+[0m12:16:16.933792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B722DB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B722E750>]}
+[0m12:16:16.935786 [info ] [MainThread]: Installing https://github.com/dbt-labs/dbt_faker.git
+[0m12:16:16.938778 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt_faker.git 979d311c388461b63a6e869ef41cb439"
+[0m12:16:17.003605 [debug] [MainThread]: STDOUT: "b''"
+[0m12:16:17.004603 [debug] [MainThread]: STDERR: "b"fatal: destination path '979d311c388461b63a6e869ef41cb439' already exists and is not an empty directory.\n""
+[0m12:16:17.005600 [debug] [MainThread]: command return code=128
+[0m12:16:17.008591 [debug] [MainThread]: Updating existing dependency 979d311c388461b63a6e869ef41cb439.
+[0m12:16:17.010586 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:16:17.064442 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:16:17.065439 [debug] [MainThread]: STDERR: "b''"
+[0m12:16:17.066438 [debug] [MainThread]: Checking out revision main.
+[0m12:16:17.067434 [debug] [MainThread]: Executing "git remote set-branches origin main"
+[0m12:16:17.139242 [debug] [MainThread]: STDOUT: "b''"
+[0m12:16:17.140240 [debug] [MainThread]: STDERR: "b''"
+[0m12:16:17.142234 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags main"
+[0m12:16:18.593184 [debug] [MainThread]: STDOUT: "b''"
+[0m12:16:18.595178 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt_faker\n * branch            main       -> FETCH_HEAD\n'"
+[0m12:16:18.596176 [debug] [MainThread]: Executing "git tag --list"
+[0m12:16:18.635343 [debug] [MainThread]: STDOUT: "b''"
+[0m12:16:18.636339 [debug] [MainThread]: STDERR: "b''"
+[0m12:16:18.638332 [debug] [MainThread]: Executing "git reset --hard origin/main"
+[0m12:16:18.696177 [debug] [MainThread]: STDOUT: "b'HEAD is now at 72562f8 Merge pull request #27 from Datateer/support-faker-provider-parameters\n'"
+[0m12:16:18.697174 [debug] [MainThread]: STDERR: "b''"
+[0m12:16:18.698172 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m12:16:18.730087 [debug] [MainThread]: STDOUT: "b'72562f846f83cb8b483a5d5d151d7ae31ba3a465\n'"
+[0m12:16:18.730087 [debug] [MainThread]: STDERR: "b''"
+[0m12:16:18.731084 [debug] [MainThread]: Already at 72562f8, nothing to do.
+[0m12:16:18.742056 [info ] [MainThread]: Installed from revision main
+[0m12:16:18.744053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B720F150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B72CF010>]}
+[0m12:16:18.746047 [info ] [MainThread]: Installing calogica/dbt_date
+[0m12:16:29.097422 [info ] [MainThread]: Installed from version 0.7.2
+[0m12:16:29.099416 [info ] [MainThread]: Updated version available: 0.10.1
+[0m12:16:29.101411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6a5bd739-955a-4728-acbd-10d454c46d16', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B72CC810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B72CD4D0>]}
+[0m12:16:29.102408 [info ] [MainThread]: 
+[0m12:16:29.104403 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'calogica/dbt_expectations', 'dbt-labs/codegen', 'calogica/dbt_date']                 
+Update your versions in packages.yml, then run dbt deps
+[0m12:16:29.111385 [debug] [MainThread]: Command `dbt deps` succeeded at 12:16:29.111385 after 61.94 seconds
+[0m12:16:29.113378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B660A310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B6EE9850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215B6EFDC10>]}
+[0m12:16:29.114376 [debug] [MainThread]: Flushing usage events

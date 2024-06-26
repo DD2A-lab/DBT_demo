@@ -1,0 +1,13 @@
+# What external projects or external packages dbt needs to use. It will install them inside dbt_packages folder.
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.0.0
+
+  - package: calogica/dbt_expectations
+    version: [">=0.8.0", "<0.9.0"]
+
+  - package: dbt-labs/codegen
+    version: 0.9.0
+
+  - git: "https://github.com/dbt-labs/dbt_faker.git"
+    revision: main

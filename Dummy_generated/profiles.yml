@@ -1,0 +1,14 @@
+Dummy_generated: # This needs to match the profile: in your .dbt/profiles.yml file
+  target: dev
+  outputs:
+    dev:
+      type: bigquery # What type of SQL DBT will use. This time it's BigQuery
+      method: oauth
+      # To use this, first run in your terminal: export BIGQUERY_PROJECT="your_project_name"
+      # Then dbt will recognise the variable
+      database: "{{ env_var('BIGQUERY_PROJECT')}}"
+      schema: dbt_marta # Replace with your name. That's the dataset that the data will be written to on BigQuery
+      threads: 64 # Max number of concurent things running at once
+      timeout_seconds: 300
+      location: US
+      priority: interactive # BigQuery can be "batch" OR "interactive"
