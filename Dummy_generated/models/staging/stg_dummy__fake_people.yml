@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_dummy__fake_people
+    description: "This is faked generated dataset for the testing purposes only. Full register of the employees"
+    columns:
+      - name: id
+        description: "Unique identifier of the employee"
+      - name: first_name
+        description: "First name of the employee"
+      - name: last_name
+        description: "Last name of the employee"
+      - name: gender
+        description: "Gender of the employee"
+      - name: email
+        description: "Email of the employee"
+      - name: age
+        description: "Age of the employee"
+      - name: username
