@@ -1,0 +1,18 @@
+# Source file provide information of all sources used in the DBT.
+version: 2
+
+sources:
+  - name: dbt_marta
+    database: macro-campaign-427608-v7
+    tables:
+      - name: companies_base
+      - name: employees_base
+      - name: enterprise_orders_base
+      - name: products_base
+      - name: fake_people
+      - name: fake_personal_info
+      - name: fake_products
+
+
+
+

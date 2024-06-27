@@ -1,0 +1,3 @@
+To initialise project from scratch and create a dbt format quickly do dbt.init in the main folder using oath method.
+To find where profiles.yml was stored on the local machine use dbt debug --config-dir
+
