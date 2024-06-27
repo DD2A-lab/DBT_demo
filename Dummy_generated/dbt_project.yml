@@ -54,4 +54,7 @@ models:
 tests:
   answers:
   # The default is error. There are some models that we still want to run despite the error. Better is to config this in the model.yml file.
-    +severity: warn
+    +severity: error
+
+vars:
+  faker_enabled: true
