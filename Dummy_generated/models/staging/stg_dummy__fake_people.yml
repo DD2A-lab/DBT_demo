@@ -6,12 +6,21 @@ models:
     columns:
       - name: id
         description: "Unique identifier of the employee"
+        tests:
+          - not_null
+          - unique
       - name: first_name
         description: "First name of the employee"
       - name: last_name
         description: "Last name of the employee"
       - name: gender
         description: "Gender of the employee"
+        tests:
+          - accepted_values:
+              values:
+                - female
+                - male
+                - other
       - name: email
         description: "Email of the employee"
       - name: age
