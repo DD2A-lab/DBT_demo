@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_dummy__fake_personal_info
+    description: "This is faked generated dataset for the testing purposes only. Adding extra information about employees"
+    columns:
+      - name: id
+        description: "Unique identifier of the employee. Links to id in the fake_people table."
+      - name: phone_number
+        description: "employee phone number"
+      - name: address
+        description: "employee address"
+      - name: birthdate
+        description: "Employee birtdate"
+      - name: blood_type
+        description: "favorite_color"
+      - name: credit_score
+        description: "employee credit score"

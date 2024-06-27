@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_dummy__fake_products
+    description: "This is faked generated dataset for the testing purposes only. Register of all products."
+    columns:
+      - name: id
+        description: "Unique identifier of the product"
+      - name: category
+        description: "Category of the product"
+      - name: name
+        description: "Name of the product"
+      - name: price
+        description: "Price of the product"

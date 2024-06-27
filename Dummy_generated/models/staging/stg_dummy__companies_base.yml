@@ -1,0 +1,19 @@
+# model.yml file provides information on the table description and column description.
+# When inserting through DBT it allows to keep the refresh of tables consistent in the case when there is a need of dropping a table on DBT.
+
+version: 2
+
+models:
+  - name: stg_dummy__companies_base
+    description: "This is faked generated dataset for the testing purposes only. Adding extra company informations"
+    columns:
+      - name: id
+        description: "Unique identifier of the company. Links to id in the fake_companies table to trace up the orders."
+      - name: name
+        description: "Registered company name."
+      - name: slogan
+        description: "Company statement."
+      - name: purpose
+        description: "Company key statement."
+      - name: date_added
+        description: "When the company was active"

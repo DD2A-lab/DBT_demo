@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_dummy__enterprise_orders_base
+    description: "This is faked generated dataset for the testing purposes only. Register of transactions taking place."
+    columns:
+      - name: date
+        description: "Date of the transacton"
+      - name: emloyee_id
+        description: "Unique identifier of the employer. For full information about the employee use employee tables."
+      - name: product_id
+        description: "Unique identifier of the product. For full information about the product use product tables. "
+      - name: num_idems
+        description: "Number of items ordered"
