@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_dummy__fake_companies
+    description: "This is faked generated dataset for the testing purposes only. Full register of the companies"
+    columns:
+      - name: id
+        description: "Unique identifier of the company"
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "Name of the company"
+      - name: slogan
+        description: "Slogan of the company"
+      - name: purpose
+        description: "Purpose of the company"

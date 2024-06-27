@@ -12,6 +12,7 @@ sources:
       - name: fake_people
       - name: fake_personal_info
       - name: fake_products
+      - name: fake_companies
 
 
 
