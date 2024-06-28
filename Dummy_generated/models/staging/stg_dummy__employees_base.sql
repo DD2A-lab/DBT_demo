@@ -1,3 +1,7 @@
+{{
+	config(materialized='ephemeral')
+}}
+
 with source AS (SELECT *
 FROM {{ source('dbt_marta', 'employees_base')}})
 SELECT id,

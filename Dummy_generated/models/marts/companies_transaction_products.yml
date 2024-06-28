@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: companies_transaction_products
+    description: "Providing full transaction information with company and product characteristics"
+    columns:
+      - name: order_date
+        description: "Date_of_order"
+      - name: company_id
+        description: "Unique identifier of the company"
+      - name: company_name
+        description: "Company name"
+      - name: company_purpose
+        description: "Purpose of the company"
+      - name: product_id
+        description: "Unique identifier of the product"
+      - name: product_category
+        description: "Category of the product"
+      - name: product_name
+        description: "Name of the product"
+      - name: product_price
+        description: "Price of the product"
+      - name: num_items
+        description: "Number of items"

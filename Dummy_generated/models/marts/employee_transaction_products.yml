@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: employee_transaction_database
+    description: "Providing full transaction information with employee and product characteristics"
+    columns:
+      - name: order_date
+        description: "Date_of_order"
+      - name: employee_id
+        description: "Unique identifier of the employee"
+      - name: first_name
+        description: "First name of the employee"
+      - name: last_name
+        description: "Last name of the employee"
+      - name: gender
+        description: "Gender of the employee"
+      - name: day_of_birth
+        description: "Day of birth of the employee"
+      - name: month_of_birth
+        description: "Month of birth of the employee"
+      - name: age
+        description: "Age of the employee"
+      - name: email
+        description: "Email of the employee"
+      - name: phone_number
+        description: "Phone number of the employee"
+      - name: address
+        description: "Address of the employee"
+      - name: username
+        description: "Username of the employee"
+      - name: credit_score
+        description: "Credit score of the employee"
+      - name: product_id
+        description: "Unique identifier of the product"
+      - name: category
+        description: "Category of the product"
+      - name: name
+        description: "Company name"
+      - name: price
+        description: "Price of the product"
+      - name: num_items
+        description: "Number of items"
