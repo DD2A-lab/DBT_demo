@@ -1,3 +1,7 @@
+{{
+	config(materialized='ephemeral')
+}}
+
 WITH source AS (SELECT *
 FROM {{source('dbt_marta', 'fake_companies')}})
 SELECT id,

@@ -1,3 +1,7 @@
+{{
+	config(materialized='ephemeral')
+}}
+
 with source as (SELECT *
 FROM {{ source('dbt_marta', 'enterprise_orders_base') }})
 SELECT date,

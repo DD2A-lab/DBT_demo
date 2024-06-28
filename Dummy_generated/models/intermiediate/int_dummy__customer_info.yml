@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int_dummy__customer_info.sql
+    description: "Providing full information about the customer"
+    columns:
+      - name: employee_id
+        description: "Unique identifier of the employee"
+      - name: first_name
+        description: "First name of the employee"
+      - name: last_name
+        description: "Last name of the employee"
+      - name: gender
+        description: "Gender of the employee"
+      - name: birthdate
+        description: "Date of birth of the employee"
+      - name: email
+        description: "Email address of the employee"
+      - name: phone_number
+        description: "Phone number of the employee"
+      - name: address
+        description: "Address of the employee"
+      - name: age
+        description: "Age of the employee"
+      - name: username
+        description: "Username of the employee"
+      - name: transaction_date
+        description: "Date of the transaction"
+      - name: company_id
+        description: "Unique identifier of the company"
+      - name: credit_score
+        description: "Credit score of the employee"
