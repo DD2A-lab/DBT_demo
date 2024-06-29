@@ -35,26 +35,20 @@ on-run-start:
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  answers:
+  Dummy_generated:
     # Config indicated by "+"" and applies to all files under models/example/
     # It would still work without the "+", but it's useful to distinguish from a resource path
     +materialized: table # Default to table materialisation
     +persist_docs: # Writes all of our column descriptions into BigQuery!
       relation: true
       columns: true
-    # Table deletes 168 hours (7 days) after creation
-    # Note, for incremental models this does not reset each run!
-    +hours_to_expiration: 168
-
-    marts:
-      # In reality this would only be useful if we had subfolders within marts/staging/intermediate
-      # but this is an illustration how you would apply a group to a folder
-      +group: sales
 
 tests:
-  answers:
+  Dummy_generated:
   # The default is error. There are some models that we still want to run despite the error. Better is to config this in the model.yml file.
-    +severity: error
+    +severity: warn
+    marts:
+      +severity: error
 
 vars:
   faker_enabled: true

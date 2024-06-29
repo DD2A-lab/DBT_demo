@@ -14,6 +14,12 @@ models:
         description: "Last name of the employee"
       - name: gender
         description: "Gender of the employee"
+        tests:
+          - accepted_values:
+              values:
+                - female
+                - male
+                - other
       - name: day_of_birth
         description: "Day of birth of the employee"
       - name: month_of_birth

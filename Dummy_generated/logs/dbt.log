@@ -6079,3 +6079,1956 @@ LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
 [0m20:20:54.202104 [debug] [MainThread]: Command `dbt run` failed at 20:20:54.202104 after 7.92 seconds
 [0m20:20:54.207094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197695212D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019763012950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019763099DD0>]}
 [0m20:20:54.211081 [debug] [MainThread]: Flushing usage events
+[0m20:27:53.846297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A1406A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002159FA5E090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A0F6CCD0>]}
+
+
+============================== 20:27:53.851254 | 7dfefa7e-3451-4049-966b-5c2730701dfe ==============================
+[0m20:27:53.851254 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:27:53.853248 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s employee_transaction_products', 'send_anonymous_usage_stats': 'True'}
+[0m20:27:54.737047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7dfefa7e-3451-4049-966b-5c2730701dfe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A213EF50>]}
+[0m20:27:54.765001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7dfefa7e-3451-4049-966b-5c2730701dfe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A2170590>]}
+[0m20:27:54.766967 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:27:54.826807 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:27:55.097083 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:27:55.098082 [debug] [MainThread]: Partial parsing: updated file: Dummy_generated://models\marts\employee_transaction_products.sql
+[0m20:27:55.139998 [error] [MainThread]: Encountered an error:
+Compilation Error in model employee_transaction_products (models\marts\employee_transaction_products.sql)
+  expected token 'end of print statement', got 'partition_by'
+    line 3
+      partition_by={
+[0m20:27:55.142992 [debug] [MainThread]: Command `dbt run` failed at 20:27:55.141963 after 1.34 seconds
+[0m20:27:55.143960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A14223D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002159AC52950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215A284FF50>]}
+[0m20:27:55.143960 [debug] [MainThread]: Flushing usage events
+[0m20:29:56.141851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3B0164D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3A2A4850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3A74C910>]}
+
+
+============================== 20:29:56.145840 | 5d41d271-9bf5-4a47-88fb-a3db90579139 ==============================
+[0m20:29:56.145840 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:29:56.148070 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run -s employee_transaction_products', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:29:56.766646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3BD3EC10>]}
+[0m20:29:56.786593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3BD70590>]}
+[0m20:29:56.788587 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:29:56.846431 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:29:57.098756 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:29:57.098756 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:29:57.100752 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers.marts
+- models.answers
+- tests.answers
+[0m20:29:57.109727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3BCD0E50>]}
+[0m20:29:57.157605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3C4B7ED0>]}
+[0m20:29:57.158598 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:29:57.160593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3BD2FC90>]}
+[0m20:29:57.166581 [info ] [MainThread]: 
+[0m20:29:57.168382 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:29:57.170346 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:29:57.170346 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:58.836317 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:29:58.837317 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:58.839313 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:29:58.843511 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:59.304672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3C443DD0>]}
+[0m20:29:59.306664 [info ] [MainThread]: 
+[0m20:29:59.309373 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:29:59.329279 [info ] [MainThread]: Database error while running on-run-start
+[0m20:29:59.331274 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:29:59.333266 [info ] [MainThread]: 
+[0m20:29:59.365817 [debug] [Thread-1 (]: Began running node model.Dummy_generated.employee_transaction_products
+[0m20:29:59.367811 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.employee_transaction_products ..... [RUN]
+[0m20:29:59.370799 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.employee_transaction_products'
+[0m20:29:59.371806 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.employee_transaction_products
+[0m20:29:59.425654 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:29:59.427646 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:29:59.429622 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.450561 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:29:59.454552 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:29:59.456549 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.468514 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:29:59.470509 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:29:59.473501 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.482477 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.496439 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:29:59.498434 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:29:59.500431 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.523369 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:29:59.527360 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (compile): 20:29:59.372795 => 20:29:59.526360
+[0m20:29:59.528355 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.employee_transaction_products
+[0m20:29:59.597170 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:30:00.056421 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.employee_transaction_products"
+[0m20:30:00.059390 [debug] [Thread-1 (]: On model.Dummy_generated.employee_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.employee_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+) SELECT
+dt1.date AS order_date,
+dt1.employee_id,
+dt2.first_name,
+dt2.last_name,
+dt2.gender,
+extract(day from dt2.birthdate) AS day_of_birth,
+extract(month from birthdate) AS month_of_date,
+dt2.age,
+dt2.email,
+dt2.phone_number,
+dt2.address,
+dt2.username,
+dt2.credit_score,
+dt1.product_id,
+dt3.category,
+dt3.name,
+dt3.price,
+dt1.num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
+LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
+LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+
+
+
+  WHERE date >= (SELECT MAX(date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+    values
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+
+
+    
+[0m20:30:00.727419 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:c8ae2432-8408-4601-9b60-583587109f83&page=queryresults
+[0m20:30:03.142357 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (execute): 20:29:59.531350 => 20:30:03.142357
+[0m20:30:03.144353 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5d41d271-9bf5-4a47-88fb-a3db90579139', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3C506150>]}
+[0m20:30:03.146346 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.employee_transaction_products  [[32mMERGE (13.0 rows, 1.5 MiB processed)[0m in 3.77s]
+[0m20:30:03.148342 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.employee_transaction_products
+[0m20:30:03.154326 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:30:03.154326 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:30:03.155324 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:30:03.156319 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:30:03.157319 [debug] [MainThread]: Connection 'model.Dummy_generated.employee_transaction_products' was properly closed.
+[0m20:30:03.159313 [info ] [MainThread]: 
+[0m20:30:03.160309 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 5.99 seconds (5.99s).
+[0m20:30:03.164300 [debug] [MainThread]: Command end result
+[0m20:30:03.202203 [info ] [MainThread]: 
+[0m20:30:03.204192 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:30:03.206188 [info ] [MainThread]: 
+[0m20:30:03.208183 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:30:03.212172 [info ] [MainThread]: 
+[0m20:30:03.216162 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:30:03.220151 [debug] [MainThread]: Command `dbt run` failed at 20:30:03.220151 after 7.12 seconds
+[0m20:30:03.222146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE34852950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3A74C150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE3A2ACE10>]}
+[0m20:30:03.223172 [debug] [MainThread]: Flushing usage events
+[0m20:32:48.899388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4A14F510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4A16A790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4A91AE90>]}
+
+
+============================== 20:32:48.907366 | 16f7dcd7-cb17-4f2e-b88e-58c0edd519a6 ==============================
+[0m20:32:48.907366 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:32:48.909361 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run -s employee_transaction_products', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:32:49.904251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4BF47E90>]}
+[0m20:32:49.940154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4B809950>]}
+[0m20:32:49.942150 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:32:50.040886 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:32:50.458768 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:32:50.459765 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:32:50.464755 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers.marts
+- models.answers
+- tests.answers
+[0m20:32:50.488688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4B5F4B90>]}
+[0m20:32:50.545535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4BFB7610>]}
+[0m20:32:50.547531 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:32:50.549526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4BF559D0>]}
+[0m20:32:50.556506 [info ] [MainThread]: 
+[0m20:32:50.559501 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:32:50.567478 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:32:50.569472 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:53.055963 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:32:53.057959 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:32:53.058957 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:53.060950 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:53.450417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4A169C90>]}
+[0m20:32:53.451414 [info ] [MainThread]: 
+[0m20:32:53.453407 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:32:53.482337 [info ] [MainThread]: Database error while running on-run-start
+[0m20:32:53.487318 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:32:53.490312 [info ] [MainThread]: 
+[0m20:32:53.539178 [debug] [Thread-1 (]: Began running node model.Dummy_generated.employee_transaction_products
+[0m20:32:53.541173 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.employee_transaction_products ..... [RUN]
+[0m20:32:53.544165 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.employee_transaction_products'
+[0m20:32:53.548156 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.employee_transaction_products
+[0m20:32:53.643898 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:32:53.648884 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:32:53.652876 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.687781 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:32:53.689775 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:32:53.692767 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.719697 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:32:53.722688 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:32:53.725682 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.760595 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.782533 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:32:53.787515 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:32:53.789509 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.838885 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:53.841878 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (compile): 20:32:53.554142 => 20:32:53.840880
+[0m20:32:53.843873 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.employee_transaction_products
+[0m20:32:53.969536 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:32:54.442144 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.employee_transaction_products"
+[0m20:32:54.445133 [debug] [Thread-1 (]: On model.Dummy_generated.employee_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.employee_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+) SELECT
+dt1.date AS order_date,
+dt1.employee_id,
+dt2.first_name,
+dt2.last_name,
+dt2.gender,
+extract(day from dt2.birthdate) AS day_of_birth,
+extract(month from birthdate) AS month_of_date,
+dt2.age,
+dt2.email,
+dt2.phone_number,
+dt2.address,
+dt2.username,
+dt2.credit_score,
+dt1.product_id,
+dt3.category,
+dt3.name,
+dt3.price,
+dt1.num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
+LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
+LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+
+
+
+  WHERE date >= (SELECT MAX(date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+    values
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+
+
+    
+[0m20:32:55.055833 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:87a539e1-1084-446f-89f2-ee090837fcc0&page=queryresults
+[0m20:32:57.467974 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (execute): 20:32:53.844871 => 20:32:57.467974
+[0m20:32:57.470965 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '16f7dcd7-cb17-4f2e-b88e-58c0edd519a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4BEE88D0>]}
+[0m20:32:57.472962 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.employee_transaction_products  [[32mMERGE (13.0 rows, 1.5 MiB processed)[0m in 3.93s]
+[0m20:32:57.475956 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.employee_transaction_products
+[0m20:32:57.489916 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:32:57.490912 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:32:57.491911 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:32:57.492907 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:32:57.496901 [debug] [MainThread]: Connection 'model.Dummy_generated.employee_transaction_products' was properly closed.
+[0m20:32:57.499891 [info ] [MainThread]: 
+[0m20:32:57.504882 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.94 seconds (6.94s).
+[0m20:32:57.508864 [debug] [MainThread]: Command end result
+[0m20:32:57.592641 [info ] [MainThread]: 
+[0m20:32:57.607601 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:32:57.618571 [info ] [MainThread]: 
+[0m20:32:57.624556 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:32:57.642509 [info ] [MainThread]: 
+[0m20:32:57.658466 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:32:57.675420 [debug] [MainThread]: Command `dbt run` failed at 20:32:57.675420 after 8.84 seconds
+[0m20:32:57.678415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4AA15F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4A1CAF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B4905E010>]}
+[0m20:32:57.684397 [debug] [MainThread]: Flushing usage events
+[0m20:33:56.345740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736EB37F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736EE3E750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736E734350>]}
+
+
+============================== 20:33:56.350726 | acf77845-4ac1-429d-9b7a-0bcba95d0bf9 ==============================
+[0m20:33:56.350726 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:33:56.352722 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run -s employee_transaction_products', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:33:57.109299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736EB4CB50>]}
+[0m20:33:57.133261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002737020B090>]}
+[0m20:33:57.135228 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:33:57.210027 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:33:57.495770 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:33:57.496767 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:33:57.499762 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers
+- models.answers.marts
+- tests.answers
+[0m20:33:57.514719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736FFB9750>]}
+[0m20:33:57.562592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273709B7B50>]}
+[0m20:33:57.564586 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:33:57.566586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273709297D0>]}
+[0m20:33:57.570573 [info ] [MainThread]: 
+[0m20:33:57.573566 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:33:57.579548 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:33:57.582543 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:33:59.547069 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:33:59.548065 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:33:59.549190 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:33:59.549669 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:33:59.970655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736F436E90>]}
+[0m20:33:59.971653 [info ] [MainThread]: 
+[0m20:33:59.973654 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:34:00.015537 [info ] [MainThread]: Database error while running on-run-start
+[0m20:34:00.019562 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:34:00.028502 [info ] [MainThread]: 
+[0m20:34:00.081275 [debug] [Thread-1 (]: Began running node model.Dummy_generated.employee_transaction_products
+[0m20:34:00.082245 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.employee_transaction_products ..... [RUN]
+[0m20:34:00.084240 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.employee_transaction_products'
+[0m20:34:00.086236 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.employee_transaction_products
+[0m20:34:00.150061 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:34:00.151059 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:34:00.153053 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.187965 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:34:00.194943 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:34:00.199929 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.220875 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:34:00.226857 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:34:00.230845 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.250795 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.265752 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:34:00.267747 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:34:00.269742 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.288691 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.292691 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (compile): 20:34:00.086236 => 20:34:00.292691
+[0m20:34:00.295673 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.employee_transaction_products
+[0m20:34:00.424329 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:34:00.906282 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.employee_transaction_products"
+[0m20:34:00.912260 [debug] [Thread-1 (]: On model.Dummy_generated.employee_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.employee_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+) SELECT
+dt1.date AS order_date,
+dt1.employee_id,
+dt2.first_name,
+dt2.last_name,
+dt2.gender,
+extract(day from dt2.birthdate) AS day_of_birth,
+extract(month from birthdate) AS month_of_date,
+dt2.age,
+dt2.email,
+dt2.phone_number,
+dt2.address,
+dt2.username,
+dt2.credit_score,
+dt1.product_id,
+dt3.category,
+dt3.name,
+dt3.price,
+dt1.num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
+LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
+LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+
+
+
+  WHERE date >= (SELECT MAX(date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+    values
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+
+
+    
+[0m20:34:01.810077 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:103c6b44-4dde-4522-85b2-098784202b2b&page=queryresults
+[0m20:34:04.219220 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (execute): 20:34:00.296670 => 20:34:04.219220
+[0m20:34:04.222183 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'acf77845-4ac1-429d-9b7a-0bcba95d0bf9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027370980450>]}
+[0m20:34:04.224178 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.employee_transaction_products  [[32mMERGE (13.0 rows, 1.5 MiB processed)[0m in 4.14s]
+[0m20:34:04.228168 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.employee_transaction_products
+[0m20:34:04.237174 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:34:04.239139 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:34:04.240135 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:34:04.243131 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:34:04.248115 [debug] [MainThread]: Connection 'model.Dummy_generated.employee_transaction_products' was properly closed.
+[0m20:34:04.250110 [info ] [MainThread]: 
+[0m20:34:04.253101 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.68 seconds (6.68s).
+[0m20:34:04.258088 [debug] [MainThread]: Command end result
+[0m20:34:04.302969 [info ] [MainThread]: 
+[0m20:34:04.305959 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:34:04.313938 [info ] [MainThread]: 
+[0m20:34:04.315932 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:34:04.317927 [info ] [MainThread]: 
+[0m20:34:04.320920 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:34:04.329896 [debug] [MainThread]: Command `dbt run` failed at 20:34:04.328897 after 8.03 seconds
+[0m20:34:04.332888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027368C52950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002736F409450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027368CD9ED0>]}
+[0m20:34:04.333885 [debug] [MainThread]: Flushing usage events
+[0m20:34:58.745814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126D878D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027127212150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002712731C910>]}
+
+
+============================== 20:34:58.750801 | 6656331c-b5bd-4363-98b0-12bfcddf157f ==============================
+[0m20:34:58.750801 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:34:58.752796 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run -s companies_transaction_products', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:34:59.360201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027128F3CF90>]}
+[0m20:34:59.377155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027128F3C490>]}
+[0m20:34:59.379120 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:34:59.450928 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:34:59.715223 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:34:59.716221 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:34:59.718214 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers
+- models.answers.marts
+- tests.answers
+[0m20:34:59.727220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027128871D90>]}
+[0m20:34:59.772070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027128FB7F50>]}
+[0m20:34:59.774065 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:34:59.776060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126DACCD0>]}
+[0m20:34:59.778055 [info ] [MainThread]: 
+[0m20:34:59.780080 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:34:59.782043 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:34:59.783042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:01.425029 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:35:01.427022 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:35:01.428021 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:01.429017 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:01.911344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126DACCD0>]}
+[0m20:35:01.914388 [info ] [MainThread]: 
+[0m20:35:01.918865 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:35:01.947786 [info ] [MainThread]: Database error while running on-run-start
+[0m20:35:01.952257 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:35:01.954241 [info ] [MainThread]: 
+[0m20:35:01.990388 [debug] [Thread-1 (]: Began running node model.Dummy_generated.companies_transaction_products
+[0m20:35:01.991384 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.companies_transaction_products .... [RUN]
+[0m20:35:01.994375 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.companies_transaction_products'
+[0m20:35:01.996372 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.companies_transaction_products
+[0m20:35:02.043243 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:35:02.045238 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:35:02.047233 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.061195 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, companies_base
+[0m20:35:02.063191 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, companies_base
+[0m20:35:02.065185 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.086131 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:35:02.088126 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:35:02.094109 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.111063 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:35:02.113057 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:35:02.116051 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.128019 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:35:02.130012 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:35:02.132006 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.187860 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.240715 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.243709 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (compile): 20:35:01.996372 => 20:35:02.243709
+[0m20:35:02.245705 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.companies_transaction_products
+[0m20:35:02.357404 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:35:02.870006 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.companies_transaction_products"
+[0m20:35:02.871976 [debug] [Thread-1 (]: On model.Dummy_generated.companies_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.companies_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__companies_base as (
+
+
+WITH source AS (
+	SELECT *
+	FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_base`
+)
+SELECT id,
+name,
+slogan,
+purpose,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+), orders as (SELECT
+date AS order_date,
+employee_id,
+product_id,
+num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base
+GROUP BY 1, 2, 3, 4),
+companies as (
+  SELECT id AS company_id,
+  name AS company_name,
+  purpose AS company_purpose
+  FROM __dbt__cte__stg_dummy__companies_base
+  GROUP BY 1, 2, 3
+),
+products as (
+  SELECT
+  id AS product_id,
+  category AS product_category,
+  name AS product_name,
+  price AS product_price
+  FROM __dbt__cte__stg_dummy__products_base
+  GROUP BY 1, 2, 3, 4
+),
+employees as (
+  SELECT employee_id,
+  company_id
+  FROM __dbt__cte__int_dummy__customer_info
+  GROUP BY 1, 2
+)
+SELECT orders.order_date,
+companies.company_id,
+companies.company_name,
+companies.company_purpose,
+orders.product_id,
+products.product_category,
+products.product_name,
+products.product_price,
+orders.num_items
+FROM orders
+LEFT JOIN employees using(employee_id)
+LEFT JOIN companies ON employees.company_id = companies.company_id
+LEFT JOIN products ON orders.product_id = products.product_id
+
+
+
+  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+    values
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+
+
+    
+[0m20:35:03.455338 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:4eaaf0bb-f049-4b5a-802e-c3bb05578f13&page=queryresults
+[0m20:35:05.993292 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (execute): 20:35:02.246705 => 20:35:05.993292
+[0m20:35:05.996282 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6656331c-b5bd-4363-98b0-12bfcddf157f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126D94CD0>]}
+[0m20:35:05.998279 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.companies_transaction_products  [[32mMERGE (8.0 rows, 1.4 KiB processed)[0m in 4.00s]
+[0m20:35:06.002279 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.companies_transaction_products
+[0m20:35:06.024207 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:35:06.026242 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:35:06.027201 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:35:06.028195 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:35:06.029194 [debug] [MainThread]: Connection 'model.Dummy_generated.companies_transaction_products' was properly closed.
+[0m20:35:06.031189 [info ] [MainThread]: 
+[0m20:35:06.034181 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.25 seconds (6.25s).
+[0m20:35:06.038200 [debug] [MainThread]: Command end result
+[0m20:35:06.073077 [info ] [MainThread]: 
+[0m20:35:06.076070 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:35:06.078063 [info ] [MainThread]: 
+[0m20:35:06.080062 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:35:06.082052 [info ] [MainThread]: 
+[0m20:35:06.087039 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:35:06.091029 [debug] [MainThread]: Command `dbt run` failed at 20:35:06.090031 after 7.38 seconds
+[0m20:35:06.092028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126A64A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027126CD1DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027121612950>]}
+[0m20:35:06.093023 [debug] [MainThread]: Flushing usage events
+[0m20:36:22.740488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CC53F8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CBFCA150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CC5D4410>]}
+
+
+============================== 20:36:22.747469 | 506e3b05-c8d9-4d04-b4e0-6fdad3ec4183 ==============================
+[0m20:36:22.747469 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:36:22.749466 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh -s companies_transaction_products', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:36:23.367511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CE333990>]}
+[0m20:36:23.387430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CDC1F850>]}
+[0m20:36:23.389423 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:36:23.458240 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:36:23.714584 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:36:23.715552 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:36:23.717547 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers
+- models.answers.marts
+- tests.answers
+[0m20:36:23.726551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CE542410>]}
+[0m20:36:23.772399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CE3B7ED0>]}
+[0m20:36:23.773398 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:36:23.778383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CE329490>]}
+[0m20:36:23.782375 [info ] [MainThread]: 
+[0m20:36:23.784369 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:36:23.787365 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:36:23.788364 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:36:25.357717 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:36:25.359715 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:36:25.359715 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:36:25.361708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:36:26.006095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CC564DD0>]}
+[0m20:36:26.009134 [info ] [MainThread]: 
+[0m20:36:26.014071 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:36:26.047978 [info ] [MainThread]: Database error while running on-run-start
+[0m20:36:26.049973 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:36:26.051003 [info ] [MainThread]: 
+[0m20:36:26.082363 [debug] [Thread-1 (]: Began running node model.Dummy_generated.companies_transaction_products
+[0m20:36:26.083389 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.companies_transaction_products .... [RUN]
+[0m20:36:26.086352 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.companies_transaction_products'
+[0m20:36:26.087394 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.companies_transaction_products
+[0m20:36:26.136217 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:36:26.137604 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:36:26.139602 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.151571 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, companies_base
+[0m20:36:26.152568 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, companies_base
+[0m20:36:26.155135 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.165106 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:36:26.167102 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:36:26.169458 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.187409 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:36:26.188406 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:36:26.192401 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.205365 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:36:26.210351 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:36:26.214340 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.229299 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.251238 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:26.253233 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (compile): 20:36:26.088380 => 20:36:26.252237
+[0m20:36:26.255228 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.companies_transaction_products
+[0m20:36:26.322049 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:36:26.720887 [debug] [Thread-1 (]: Hard refreshing `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products` because it is not replaceable
+[0m20:36:27.146307 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.companies_transaction_products"
+[0m20:36:27.149271 [debug] [Thread-1 (]: On model.Dummy_generated.companies_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.companies_transaction_products"} */
+
+  
+    
+
+    create or replace table `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`
+      
+    partition by order_date
+    
+
+    OPTIONS()
+    as (
+      
+
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__companies_base as (
+
+
+WITH source AS (
+	SELECT *
+	FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_base`
+)
+SELECT id,
+name,
+slogan,
+purpose,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+), orders as (SELECT
+date AS order_date,
+employee_id,
+product_id,
+num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base
+GROUP BY 1, 2, 3, 4),
+companies as (
+  SELECT id AS company_id,
+  name AS company_name,
+  purpose AS company_purpose
+  FROM __dbt__cte__stg_dummy__companies_base
+  GROUP BY 1, 2, 3
+),
+products as (
+  SELECT
+  id AS product_id,
+  category AS product_category,
+  name AS product_name,
+  price AS product_price
+  FROM __dbt__cte__stg_dummy__products_base
+  GROUP BY 1, 2, 3, 4
+),
+employees as (
+  SELECT employee_id,
+  company_id
+  FROM __dbt__cte__int_dummy__customer_info
+  GROUP BY 1, 2
+)
+SELECT orders.order_date,
+companies.company_id,
+companies.company_name,
+companies.company_purpose,
+orders.product_id,
+products.product_category,
+products.product_name,
+products.product_price,
+orders.num_items
+FROM orders
+LEFT JOIN employees using(employee_id)
+LEFT JOIN companies ON employees.company_id = companies.company_id
+LEFT JOIN products ON orders.product_id = products.product_id
+
+
+    );
+  
+[0m20:36:27.638730 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:36554e40-2dd8-4a6f-b30d-98bc703d3e0c&page=queryresults
+[0m20:36:30.460054 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (execute): 20:36:26.256228 => 20:36:30.459061
+[0m20:36:30.462048 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '506e3b05-c8d9-4d04-b4e0-6fdad3ec4183', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220CC551210>]}
+[0m20:36:30.464043 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.companies_transaction_products  [[32mCREATE TABLE (12.0 rows, 1.3 KiB processed)[0m in 4.38s]
+[0m20:36:30.467036 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.companies_transaction_products
+[0m20:36:30.474016 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:36:30.475012 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:36:30.476012 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:36:30.477008 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:36:30.479003 [debug] [MainThread]: Connection 'model.Dummy_generated.companies_transaction_products' was properly closed.
+[0m20:36:30.479999 [info ] [MainThread]: 
+[0m20:36:30.480996 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.70 seconds (6.70s).
+[0m20:36:30.484986 [debug] [MainThread]: Command end result
+[0m20:36:30.535850 [info ] [MainThread]: 
+[0m20:36:30.537844 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:36:30.538842 [info ] [MainThread]: 
+[0m20:36:30.541837 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:36:30.546823 [info ] [MainThread]: 
+[0m20:36:30.548815 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:36:30.555797 [debug] [MainThread]: Command `dbt run` failed at 20:36:30.554800 after 7.85 seconds
+[0m20:36:30.556795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C66D9D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C6652910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C6651D50>]}
+[0m20:36:30.558793 [debug] [MainThread]: Flushing usage events
+[0m20:38:19.427428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A57816850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A56FD4250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A56F69150>]}
+
+
+============================== 20:38:19.433411 | e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f ==============================
+[0m20:38:19.433411 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:38:19.435406 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --full-refresh -s employee_transaction_products', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:38:20.178421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A584A25D0>]}
+[0m20:38:20.200389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A584DCD50>]}
+[0m20:38:20.202356 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:38:20.299137 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:38:20.642222 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:38:20.643220 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:38:20.645216 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.answers
+- models.answers.marts
+- tests.answers
+[0m20:38:20.658180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A58DEF310>]}
+[0m20:38:20.716031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A58CB7A10>]}
+[0m20:38:20.718023 [info ] [MainThread]: Found 1 operation, 11 models, 7 tests, 1 snapshot, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:38:20.721016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A58C49A90>]}
+[0m20:38:20.725004 [info ] [MainThread]: 
+[0m20:38:20.726999 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:38:20.734978 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:38:20.735974 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:23.151856 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:38:23.152853 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:23.169807 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:38:23.171802 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:23.668888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A58C1FE50>]}
+[0m20:38:23.669885 [info ] [MainThread]: 
+[0m20:38:23.687838 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:38:23.713769 [info ] [MainThread]: Database error while running on-run-start
+[0m20:38:23.716762 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:38:23.733717 [info ] [MainThread]: 
+[0m20:38:23.786577 [debug] [Thread-1 (]: Began running node model.Dummy_generated.employee_transaction_products
+[0m20:38:23.788569 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.employee_transaction_products ..... [RUN]
+[0m20:38:23.792558 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.employee_transaction_products'
+[0m20:38:23.794552 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.employee_transaction_products
+[0m20:38:23.891293 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:38:23.893289 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:38:23.898275 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:23.942158 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:38:23.945149 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:38:23.953128 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:23.967099 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:38:23.969088 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:38:23.973077 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:23.994018 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:24.009981 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:38:24.013966 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:38:24.025934 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:24.085778 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:24.089768 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (compile): 20:38:23.796549 => 20:38:24.086771
+[0m20:38:24.091759 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.employee_transaction_products
+[0m20:38:24.180520 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:38:24.691301 [debug] [Thread-1 (]: Hard refreshing `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` because it is not replaceable
+[0m20:38:25.199937 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.employee_transaction_products"
+[0m20:38:25.204924 [debug] [Thread-1 (]: On model.Dummy_generated.employee_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.employee_transaction_products"} */
+
+  
+    
+
+    create or replace table `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`
+      
+    partition by order_date
+    
+
+    OPTIONS()
+    as (
+      
+
+with __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+) SELECT
+dt1.date AS order_date,
+dt1.employee_id,
+dt2.first_name,
+dt2.last_name,
+dt2.gender,
+extract(day from dt2.birthdate) AS day_of_birth,
+extract(month from birthdate) AS month_of_date,
+dt2.age,
+dt2.email,
+dt2.phone_number,
+dt2.address,
+dt2.username,
+dt2.credit_score,
+dt1.product_id,
+dt3.category,
+dt3.name,
+dt3.price,
+dt1.num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
+LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
+LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+
+
+    );
+  
+[0m20:38:25.727040 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:96c49f49-6426-4df9-a6ff-15316ea77334&page=queryresults
+[0m20:38:28.188314 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (execute): 20:38:24.092754 => 20:38:28.188314
+[0m20:38:28.190309 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e85c90d3-3ecc-4682-85c7-cfeaa21a7b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A58C24A50>]}
+[0m20:38:28.191308 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.employee_transaction_products  [[32mCREATE TABLE (13.0 rows, 1.5 MiB processed)[0m in 4.40s]
+[0m20:38:28.194299 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.employee_transaction_products
+[0m20:38:28.204303 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:38:28.205268 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:38:28.206267 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:38:28.209261 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:38:28.211254 [debug] [MainThread]: Connection 'model.Dummy_generated.employee_transaction_products' was properly closed.
+[0m20:38:28.215248 [info ] [MainThread]: 
+[0m20:38:28.220232 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 7.49 seconds (7.49s).
+[0m20:38:28.223224 [debug] [MainThread]: Command end result
+[0m20:38:28.273089 [info ] [MainThread]: 
+[0m20:38:28.276080 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:38:28.278074 [info ] [MainThread]: 
+[0m20:38:28.287052 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:38:28.289045 [info ] [MainThread]: 
+[0m20:38:28.293037 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:38:28.302012 [debug] [MainThread]: Command `dbt run` failed at 20:38:28.302012 after 8.92 seconds
+[0m20:38:28.305003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A510D9D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A584BECD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A57245150>]}
+[0m20:38:28.307000 [debug] [MainThread]: Flushing usage events
+[0m20:55:14.310117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E125C06890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E124E96450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12536CC10>]}
+
+
+============================== 20:55:14.320297 | 327e330e-8ee5-4bf7-9f46-787fc201c4fd ==============================
+[0m20:55:14.320297 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:55:14.323300 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run -s companies_transaction_products', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:55:15.591657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12702B750>]}
+[0m20:55:15.628558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1268A3A90>]}
+[0m20:55:15.630552 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:55:15.747240 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:55:16.066388 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:55:16.067386 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:55:16.068381 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- tests.Dummy_generated.marts
+[0m20:55:16.078356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12723C690>]}
+[0m20:55:16.328717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1270B7D90>]}
+[0m20:55:16.330714 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 operation, 7 tests, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:55:16.331709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1268DFB50>]}
+[0m20:55:16.336727 [info ] [MainThread]: 
+[0m20:55:16.338690 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:55:16.344674 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:55:16.345671 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:19.385434 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:55:19.386452 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:55:19.387433 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:19.389429 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:55:19.784638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E127034310>]}
+[0m20:55:19.786633 [info ] [MainThread]: 
+[0m20:55:19.788631 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:55:19.817586 [info ] [MainThread]: Database error while running on-run-start
+[0m20:55:19.819627 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:55:19.820582 [info ] [MainThread]: 
+[0m20:55:19.851500 [debug] [Thread-1 (]: Began running node model.Dummy_generated.companies_transaction_products
+[0m20:55:19.852498 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.companies_transaction_products .... [RUN]
+[0m20:55:19.857490 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.companies_transaction_products'
+[0m20:55:19.858481 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.companies_transaction_products
+[0m20:55:19.907350 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:55:19.909346 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:55:19.912337 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:19.922310 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, companies_base
+[0m20:55:19.923308 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, companies_base
+[0m20:55:19.925303 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:19.937272 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:55:19.939266 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:55:19.942265 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:19.964199 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:55:19.967192 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:55:19.970185 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:19.985142 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:55:19.986140 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:55:19.989132 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:20.004092 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:20.026033 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:20.033020 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (compile): 20:55:19.859483 => 20:55:20.032024
+[0m20:55:20.035011 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.companies_transaction_products
+[0m20:55:20.107813 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:55:20.659161 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.companies_transaction_products"
+[0m20:55:20.661116 [debug] [Thread-1 (]: On model.Dummy_generated.companies_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.companies_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__companies_base as (
+
+
+WITH source AS (
+	SELECT *
+	FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_base`
+)
+SELECT id,
+name,
+slogan,
+purpose,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+), orders as (SELECT
+date AS order_date,
+employee_id,
+product_id,
+num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base
+GROUP BY 1, 2, 3, 4),
+companies as (
+  SELECT id AS company_id,
+  name AS company_name,
+  purpose AS company_purpose
+  FROM __dbt__cte__stg_dummy__companies_base
+  GROUP BY 1, 2, 3
+),
+products as (
+  SELECT
+  id AS product_id,
+  category AS product_category,
+  name AS product_name,
+  price AS product_price
+  FROM __dbt__cte__stg_dummy__products_base
+  GROUP BY 1, 2, 3, 4
+),
+employees as (
+  SELECT employee_id,
+  company_id
+  FROM __dbt__cte__int_dummy__customer_info
+  GROUP BY 1, 2
+)
+SELECT orders.order_date,
+companies.company_id,
+companies.company_name,
+companies.company_purpose,
+orders.product_id,
+products.product_category,
+products.product_name,
+products.product_price,
+orders.num_items
+FROM orders
+LEFT JOIN employees using(employee_id)
+LEFT JOIN companies ON employees.company_id = companies.company_id
+LEFT JOIN products ON orders.product_id = products.product_id
+
+
+
+  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+    values
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+
+
+    
+[0m20:55:21.348158 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:d3994236-1402-4072-ba2b-3251a94aee51&page=queryresults
+[0m20:55:25.006835 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (execute): 20:55:20.036008 => 20:55:25.006835
+[0m20:55:25.009822 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '327e330e-8ee5-4bf7-9f46-787fc201c4fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12533D9D0>]}
+[0m20:55:25.012852 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.companies_transaction_products  [[32mMERGE (8.0 rows, 1.4 KiB processed)[0m in 5.16s]
+[0m20:55:25.015073 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.companies_transaction_products
+[0m20:55:25.026046 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:55:25.028071 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:55:25.029036 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:55:25.031029 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:55:25.035017 [debug] [MainThread]: Connection 'model.Dummy_generated.companies_transaction_products' was properly closed.
+[0m20:55:25.038010 [info ] [MainThread]: 
+[0m20:55:25.040007 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 8.70 seconds (8.70s).
+[0m20:55:25.044992 [debug] [MainThread]: Command end result
+[0m20:55:25.075907 [info ] [MainThread]: 
+[0m20:55:25.080902 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:55:25.083888 [info ] [MainThread]: 
+[0m20:55:25.087877 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:55:25.089871 [info ] [MainThread]: 
+[0m20:55:25.091866 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:55:25.099845 [debug] [MainThread]: Command `dbt run` failed at 20:55:25.099845 after 10.84 seconds
+[0m20:55:25.101838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12536D150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E124DD1A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E11F452950>]}
+[0m20:55:25.103834 [debug] [MainThread]: Flushing usage events
+[0m20:56:45.409236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024916994190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024915B61DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249169C4A10>]}
+
+
+============================== 20:56:45.416217 | bb55def6-f371-473d-89b7-a09d47261aef ==============================
+[0m20:56:45.416217 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:56:45.418212 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s companies_base', 'send_anonymous_usage_stats': 'True'}
+[0m20:56:46.429761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb55def6-f371-473d-89b7-a09d47261aef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249169949D0>]}
+[0m20:56:46.472647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb55def6-f371-473d-89b7-a09d47261aef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024918B34A50>]}
+[0m20:56:46.476639 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:56:46.557422 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:56:46.817754 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:56:46.818751 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:56:46.820716 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- tests.Dummy_generated.marts
+[0m20:56:46.828694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb55def6-f371-473d-89b7-a09d47261aef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024918B1F9D0>]}
+[0m20:56:46.874572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb55def6-f371-473d-89b7-a09d47261aef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024918BB7E50>]}
+[0m20:56:46.875572 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 operation, 7 tests, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:56:46.877567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb55def6-f371-473d-89b7-a09d47261aef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024918B62FD0>]}
+[0m20:56:46.880570 [warn ] [MainThread]: The selection criterion 'companies_base' does not match any nodes
+[0m20:56:46.883549 [info ] [MainThread]: 
+[0m20:56:46.886559 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:56:46.888539 [debug] [MainThread]: Command end result
+[0m20:56:46.926435 [debug] [MainThread]: Command `dbt run` succeeded at 20:56:46.926435 after 1.57 seconds
+[0m20:56:46.928428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024917724790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249177252D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024916F1E650>]}
+[0m20:56:46.929426 [debug] [MainThread]: Flushing usage events
+[0m20:57:23.250051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B563A16810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B56316A350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5634378D0>]}
+
+
+============================== 20:57:23.255038 | 4a18dfeb-f0cc-4be7-a068-f7e4b282178d ==============================
+[0m20:57:23.255038 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:57:23.256684 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'version_check': 'True', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s companies_transaction_products', 'send_anonymous_usage_stats': 'True'}
+[0m20:57:23.876479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5646D1690>]}
+[0m20:57:23.894431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B564709950>]}
+[0m20:57:23.896397 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:57:23.954271 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:57:24.213577 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:24.214575 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:24.215543 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- tests.Dummy_generated.marts
+[0m20:57:24.225547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B564FD2D90>]}
+[0m20:57:24.274385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B564E9BE90>]}
+[0m20:57:24.276386 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 operation, 7 tests, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:57:24.277378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B564E28F10>]}
+[0m20:57:24.280372 [info ] [MainThread]: 
+[0m20:57:24.285356 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:57:24.287356 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:57:24.288351 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:25.880266 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:57:25.881262 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:57:25.882262 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:25.883257 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:26.264394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B563153150>]}
+[0m20:57:26.265390 [info ] [MainThread]: 
+[0m20:57:26.266390 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:57:26.280381 [info ] [MainThread]: Database error while running on-run-start
+[0m20:57:26.283344 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:57:26.285343 [info ] [MainThread]: 
+[0m20:57:26.317827 [debug] [Thread-1 (]: Began running node model.Dummy_generated.companies_transaction_products
+[0m20:57:26.319847 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.companies_transaction_products .... [RUN]
+[0m20:57:26.322811 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.companies_transaction_products'
+[0m20:57:26.323812 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.companies_transaction_products
+[0m20:57:26.375670 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:57:26.377665 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:57:26.378663 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.387666 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, companies_base
+[0m20:57:26.389251 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, companies_base
+[0m20:57:26.391098 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.402069 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:57:26.404063 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:57:26.407057 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.432991 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:57:26.434981 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:57:26.437973 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.453930 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:57:26.459914 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:57:26.464902 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.480858 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.525737 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:26.528730 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (compile): 20:57:26.324807 => 20:57:26.527732
+[0m20:57:26.533719 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.companies_transaction_products
+[0m20:57:26.598544 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:57:27.136352 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.companies_transaction_products"
+[0m20:57:27.138322 [debug] [Thread-1 (]: On model.Dummy_generated.companies_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.companies_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__companies_base as (
+
+
+WITH source AS (
+	SELECT *
+	FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_base`
+)
+SELECT id,
+name,
+slogan,
+purpose,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+), orders as (SELECT
+date AS order_date,
+employee_id,
+product_id,
+num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base
+GROUP BY 1, 2, 3, 4),
+companies as (
+  SELECT id AS company_id,
+  name AS company_name,
+  purpose AS company_purpose
+  FROM __dbt__cte__stg_dummy__companies_base
+  GROUP BY 1, 2, 3
+),
+products as (
+  SELECT
+  id AS product_id,
+  category AS product_category,
+  name AS product_name,
+  price AS product_price
+  FROM __dbt__cte__stg_dummy__products_base
+  GROUP BY 1, 2, 3, 4
+),
+employees as (
+  SELECT employee_id,
+  company_id
+  FROM __dbt__cte__int_dummy__customer_info
+  GROUP BY 1, 2
+)
+SELECT orders.order_date,
+companies.company_id,
+companies.company_name,
+companies.company_purpose,
+orders.product_id,
+products.product_category,
+products.product_name,
+products.product_price,
+orders.num_items
+FROM orders
+LEFT JOIN employees using(employee_id)
+LEFT JOIN companies ON employees.company_id = companies.company_id
+LEFT JOIN products ON orders.product_id = products.product_id
+
+
+
+  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+    values
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+
+
+    
+[0m20:57:27.739610 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:834c7ae8-2596-48e8-b4af-f3a6efc1e286&page=queryresults
+[0m20:57:30.961824 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.companies_transaction_products (execute): 20:57:26.535716 => 20:57:30.961824
+[0m20:57:30.963820 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a18dfeb-f0cc-4be7-a068-f7e4b282178d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B564ED1410>]}
+[0m20:57:30.965813 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.companies_transaction_products  [[32mMERGE (8.0 rows, 1.4 KiB processed)[0m in 4.64s]
+[0m20:57:30.967809 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.companies_transaction_products
+[0m20:57:30.976784 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:57:30.978779 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:57:30.979776 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:57:30.980773 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:57:30.982769 [debug] [MainThread]: Connection 'model.Dummy_generated.companies_transaction_products' was properly closed.
+[0m20:57:30.984764 [info ] [MainThread]: 
+[0m20:57:30.989763 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.70 seconds (6.70s).
+[0m20:57:30.995733 [debug] [MainThread]: Command end result
+[0m20:57:31.040615 [info ] [MainThread]: 
+[0m20:57:31.043606 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:57:31.054577 [info ] [MainThread]: 
+[0m20:57:31.056571 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:57:31.058567 [info ] [MainThread]: 
+[0m20:57:31.060563 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:57:31.068540 [debug] [MainThread]: Command `dbt run` failed at 20:57:31.068540 after 7.86 seconds
+[0m20:57:31.071531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B562CAC410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B55D412950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5646BC650>]}
+[0m20:57:31.074523 [debug] [MainThread]: Flushing usage events
+[0m20:58:30.687595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87D6A4150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87E416C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87E417F50>]}
+
+
+============================== 20:58:30.700561 | 788f63aa-ea52-4bb7-97ea-09d5df83926a ==============================
+[0m20:58:30.700561 [info ] [MainThread]: Running with dbt=1.6.17
+[0m20:58:30.702555 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s employee_transaction_products', 'send_anonymous_usage_stats': 'True'}
+[0m20:58:33.539801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87F81FA10>]}
+[0m20:58:33.606823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87F83C9D0>]}
+[0m20:58:33.612808 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m20:58:33.773858 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m20:58:34.759215 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:58:34.761214 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:58:34.767195 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- tests.Dummy_generated.marts
+[0m20:58:34.820058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87EF09250>]}
+[0m20:58:34.902831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87F89BE10>]}
+[0m20:58:34.904825 [info ] [MainThread]: Found 11 models, 1 snapshot, 1 operation, 7 tests, 8 sources, 0 exposures, 0 metrics, 744 macros, 0 groups, 0 semantic models
+[0m20:58:34.912804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87F82B410>]}
+[0m20:58:34.927794 [info ] [MainThread]: 
+[0m20:58:34.933748 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:58:34.941728 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7'
+[0m20:58:34.945717 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:58:39.009219 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_snapshots'
+[0m20:58:39.011212 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_macro-campaign-427608-v7_dbt_marta'
+[0m20:58:39.012207 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:58:39.013206 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:58:39.388201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87EEBC550>]}
+[0m20:58:39.390197 [info ] [MainThread]: 
+[0m20:58:39.392192 [info ] [MainThread]: Running 1 on-run-start hook
+[0m20:58:39.423108 [info ] [MainThread]: Database error while running on-run-start
+[0m20:58:39.427098 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m20:58:39.430095 [info ] [MainThread]: 
+[0m20:58:39.466998 [debug] [Thread-1 (]: Began running node model.Dummy_generated.employee_transaction_products
+[0m20:58:39.469984 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt_marta.employee_transaction_products ..... [RUN]
+[0m20:58:39.474973 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.Dummy_generated.employee_transaction_products'
+[0m20:58:39.476965 [debug] [Thread-1 (]: Began compiling node model.Dummy_generated.employee_transaction_products
+[0m20:58:39.566726 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, enterprise_orders_base
+[0m20:58:39.568719 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, enterprise_orders_base
+[0m20:58:39.572708 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.600633 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, employees_base
+[0m20:58:39.603626 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, employees_base
+[0m20:58:39.610606 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.625567 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, fake_personal_info
+[0m20:58:39.628559 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, fake_personal_info
+[0m20:58:39.631562 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.698372 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.794117 [info ] [Thread-1 (]: dbt_faker has intercepted the source call! dbt_marta, products_base
+[0m20:58:39.797109 [info ] [Thread-1 (]: dbt_faker is enabled! dbt_marta, products_base
+[0m20:58:39.801098 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.849966 [debug] [Thread-1 (]: Writing injected SQL for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:39.855950 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (compile): 20:58:39.477962 => 20:58:39.855950
+[0m20:58:39.859940 [debug] [Thread-1 (]: Began executing node model.Dummy_generated.employee_transaction_products
+[0m20:58:39.992585 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:58:40.548101 [debug] [Thread-1 (]: Writing runtime sql for node "model.Dummy_generated.employee_transaction_products"
+[0m20:58:40.552090 [debug] [Thread-1 (]: On model.Dummy_generated.employee_transaction_products: /* {"app": "dbt", "dbt_version": "1.6.17", "profile_name": "Dummy_generated", "target_name": "dev", "node_id": "model.Dummy_generated.employee_transaction_products"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with __dbt__cte__stg_dummy__enterprise_orders_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`enterprise_orders_base`)
+SELECT date,
+employee_id,
+product_id,
+num_items
+FROM source
+),  __dbt__cte__stg_dummy__employees_base as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`employees_base`)
+SELECT id,
+first_name,
+last_name,
+gender,
+email,
+age,
+username,
+date_added,
+company_id
+FROM source
+),  __dbt__cte__stg_dummy__fake_personal_info as (
+
+
+with source AS (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`fake_personal_info`)
+SELECT id,
+phone_number,
+address,
+birthdate,
+blood_type,
+favorite_color,
+credit_score
+FROM source
+),  __dbt__cte__int_dummy__customer_info as (
+
+
+SELECT dt1.id AS employee_id,
+dt1.first_name,
+dt1.last_name,
+dt1.gender,
+dt2.birthdate,
+dt1.email,
+dt2.phone_number,
+dt2.address,
+dt1.age,
+dt1.username,
+dt1.date_added AS Transaction_date,
+dt1.company_id,
+dt2.credit_score
+FROM __dbt__cte__stg_dummy__employees_base dt1
+LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
+),  __dbt__cte__stg_dummy__products_base as (
+
+
+with source as (SELECT *
+FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
+SELECT id,
+category,
+name,
+price,
+date_added
+FROM source
+) SELECT
+dt1.date AS order_date,
+dt1.employee_id,
+dt2.first_name,
+dt2.last_name,
+dt2.gender,
+extract(day from dt2.birthdate) AS day_of_birth,
+extract(month from birthdate) AS month_of_date,
+dt2.age,
+dt2.email,
+dt2.phone_number,
+dt2.address,
+dt2.username,
+dt2.credit_score,
+dt1.product_id,
+dt3.category,
+dt3.name,
+dt3.price,
+dt1.num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
+LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
+LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+
+
+
+  WHERE date >= (SELECT MAX(date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+    values
+        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
+
+
+    
+[0m20:58:41.128088 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=macro-campaign-427608-v7&j=bq:US:c78d526a-bc3e-4cfc-9170-0c4a4fae7a8f&page=queryresults
+[0m20:58:43.560144 [debug] [Thread-1 (]: Timing info for model.Dummy_generated.employee_transaction_products (execute): 20:58:39.860937 => 20:58:43.559106
+[0m20:58:43.562097 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '788f63aa-ea52-4bb7-97ea-09d5df83926a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87D694A50>]}
+[0m20:58:43.564092 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt_marta.employee_transaction_products  [[32mMERGE (13.0 rows, 1.5 MiB processed)[0m in 4.09s]
+[0m20:58:43.567125 [debug] [Thread-1 (]: Finished running node model.Dummy_generated.employee_transaction_products
+[0m20:58:43.577089 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:58:43.578085 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7' was properly closed.
+[0m20:58:43.579083 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_snapshots' was properly closed.
+[0m20:58:43.580080 [debug] [MainThread]: Connection 'list_macro-campaign-427608-v7_dbt_marta' was properly closed.
+[0m20:58:43.581079 [debug] [MainThread]: Connection 'model.Dummy_generated.employee_transaction_products' was properly closed.
+[0m20:58:43.582074 [info ] [MainThread]: 
+[0m20:58:43.584070 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 8.65 seconds (8.65s).
+[0m20:58:43.585067 [debug] [MainThread]: Command end result
+[0m20:58:43.618497 [info ] [MainThread]: 
+[0m20:58:43.622485 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:58:43.629465 [info ] [MainThread]: 
+[0m20:58:43.631459 [error] [MainThread]:   on-run-start failed, error:
+ 'get_brand_name' is undefined
+[0m20:58:43.633454 [info ] [MainThread]: 
+[0m20:58:43.639438 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m20:58:43.652403 [debug] [MainThread]: Command `dbt run` failed at 20:58:43.651406 after 13.07 seconds
+[0m20:58:43.653402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87DBCB410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C877C52950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C87DB4ED90>]}
+[0m20:58:43.655395 [debug] [MainThread]: Flushing usage events
