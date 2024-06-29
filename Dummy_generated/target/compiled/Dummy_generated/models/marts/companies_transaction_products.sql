@@ -1,3 +1,5 @@
+
+
 with  __dbt__cte__stg_dummy__enterprise_orders_base as (
 
 
@@ -120,3 +122,8 @@ FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id
 LEFT JOIN products ON orders.product_id = products.product_id
+
+
+
+  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+

@@ -1,3 +1,6 @@
 To initialise project from scratch and create a dbt format quickly do dbt.init in the main folder using oath method.
 To find where profiles.yml was stored on the local machine use dbt debug --config-dir
 
+You can create much better column or model descriptions using marc down file located in the models/documents
+
+Snapshots: it needs to be dataset shared across eveyone in the project. If anything changes everyone will know about this.
