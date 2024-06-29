@@ -1,5 +1,11 @@
 {{
-	config(materialized = 'incremental')
+	config(materialized = 'incremental',
+	partition_by={
+			"field": "order_date",
+			"data_type": "date",
+			"granularity": "day"
+		}
+	)
 }}
 
 SELECT
