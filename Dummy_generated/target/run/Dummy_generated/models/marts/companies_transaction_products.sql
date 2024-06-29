@@ -1,8 +1,15 @@
+-- back compat for old kwarg name
+  
+  
+        
+    
 
+    
 
-  create or replace view `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`
-  OPTIONS()
-  as with  __dbt__cte__stg_dummy__enterprise_orders_base as (
+    merge into `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products` as DBT_INTERNAL_DEST
+        using (
+
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
 
 
 with source as (SELECT *
@@ -123,5 +130,22 @@ orders.num_items
 FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id
-LEFT JOIN products ON orders.product_id = products.product_id;
+LEFT JOIN products ON orders.product_id = products.product_id
 
+
+
+  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+
+
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+    values
+        (`order_date`, `company_id`, `company_name`, `company_purpose`, `product_id`, `product_category`, `product_name`, `product_price`, `num_items`)
+
+
+    

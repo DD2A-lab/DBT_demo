@@ -1,3 +1,7 @@
+{{
+	config(materialized = 'incremental')
+}}
+
 SELECT
 dt1.date AS order_date,
 dt1.employee_id,
@@ -20,4 +24,9 @@ dt1.num_items
 FROM {{ref('stg_dummy__enterprise_orders_base')}} dt1
 LEFT JOIN {{ref('int_dummy__customer_info')}} dt2 using (employee_id)
 LEFT JOIN {{ref('stg_dummy__products_base')}} dt3 ON dt1.product_id = dt3.id
-WHERE date >= date_sub(current_date(), INTERVAL 31 day)
+
+{% if is_incremental() %}
+
+  WHERE date >= (SELECT MAX(date) FROM {{ this }})
+
+{% endif %}
