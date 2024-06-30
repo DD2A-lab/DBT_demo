@@ -134,7 +134,7 @@ LEFT JOIN products ON orders.product_id = products.product_id
 
 
 
-  WHERE order_date >= (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
+  WHERE order_date > (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
 
 
         ) as DBT_INTERNAL_SOURCE
