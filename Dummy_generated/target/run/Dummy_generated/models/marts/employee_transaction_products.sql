@@ -1,15 +1,19 @@
--- back compat for old kwarg name
+
   
-  
-        
     
 
+    create or replace table `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`
+      
+    partition by order_date
     
 
-    merge into `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products` as DBT_INTERNAL_DEST
-        using (
+    OPTIONS(
+      description=""""""
+    )
+    as (
+      
 
-with __dbt__cte__stg_dummy__enterprise_orders_base as (
+with  __dbt__cte__stg_dummy__enterprise_orders_base as (
 
 
 with source as (SELECT *
@@ -76,14 +80,56 @@ name,
 price,
 date_added
 FROM source
-) SELECT
+), orders as (SELECT date,
+employee_id,
+product_id,
+num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base),
+employee as (
+	SELECT employee_id,
+	first_name,
+	last_name,
+	gender,
+	extract(day from birthdate) AS day_of_birth,
+	extract(month from birthdate) AS month_of_birth,
+	age,
+	email,
+	phone_number,
+	address,
+	username,
+	credit_score
+	FROM __dbt__cte__int_dummy__customer_info
+	GROUP BY  employee_id,
+	first_name,
+	last_name,
+	gender,
+	birthdate,
+	age,
+	email,
+	phone_number,
+	address,
+	username,
+	credit_score
+),
+products as (
+	SELECT id,
+	category,
+	name,
+	price
+	FROM __dbt__cte__stg_dummy__products_base
+	GROUP BY id,
+	category,
+	name,
+	price
+)
+SELECT
 dt1.date AS order_date,
 dt1.employee_id,
 dt2.first_name,
 dt2.last_name,
 dt2.gender,
-extract(day from dt2.birthdate) AS day_of_birth,
-extract(month from birthdate) AS month_of_date,
+day_of_birth,
+month_of_birth,
 dt2.age,
 dt2.email,
 dt2.phone_number,
@@ -95,24 +141,10 @@ dt3.category,
 dt3.name,
 dt3.price,
 dt1.num_items
-FROM __dbt__cte__stg_dummy__enterprise_orders_base dt1
-LEFT JOIN __dbt__cte__int_dummy__customer_info dt2 using (employee_id)
-LEFT JOIN __dbt__cte__stg_dummy__products_base dt3 ON dt1.product_id = dt3.id
+FROM orders dt1
+LEFT JOIN employee dt2 using (employee_id)
+LEFT JOIN products dt3 ON dt1.product_id = dt3.id
 
 
-
-  WHERE date >= (SELECT MAX(date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`employee_transaction_products`)
-
-
-        ) as DBT_INTERNAL_SOURCE
-        on (FALSE)
-
-    
-
-    when not matched then insert
-        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
-    values
-        (`order_date`, `employee_id`, `first_name`, `last_name`, `gender`, `day_of_birth`, `month_of_date`, `age`, `email`, `phone_number`, `address`, `username`, `credit_score`, `product_id`, `category`, `name`, `price`, `num_items`)
-
-
-    
+    );
+  

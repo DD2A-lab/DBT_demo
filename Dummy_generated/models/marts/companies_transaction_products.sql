@@ -4,7 +4,8 @@
 			"field": "order_date",
 			"data_type": "date",
 			"granularity": "day"
-		}
+		},
+	tags=['final_product']
 	)
 }}
 
@@ -53,6 +54,6 @@ LEFT JOIN products ON orders.product_id = products.product_id
 
 {% if is_incremental() %}
 
-  WHERE order_date >= (SELECT MAX(order_date) FROM {{ this }})
+  WHERE order_date > (SELECT MAX(order_date) FROM {{ this }})
 
 {% endif %}

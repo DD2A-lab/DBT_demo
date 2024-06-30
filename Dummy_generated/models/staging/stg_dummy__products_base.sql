@@ -1,5 +1,6 @@
 {{
-	config(materialized='ephemeral')
+	config(materialized='ephemeral',
+	tags=['base-table'])
 }}
 
 with source as (SELECT *
