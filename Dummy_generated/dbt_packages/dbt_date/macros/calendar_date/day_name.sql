@@ -35,3 +35,21 @@
 {%- set f = 'FMDy' if short else 'FMDay' -%}
     to_char({{ date }}, '{{ f }}')
 {%- endmacro %}
+
+{%- macro duckdb__day_name(date, short) -%}
+    {%- if short -%}
+    substr(dayname({{ date }}), 1, 3)
+    {%- else -%}
+    dayname({{ date }})
+    {%- endif -%}
+{%- endmacro %}
+
+{%- macro spark__day_name(date, short) -%}
+{%- set f = 'E' if short else 'EEEE' -%}
+    date_format({{ date }}, '{{ f }}')
+{%- endmacro %}
+
+{%- macro trino__day_name(date, short) -%}
+{%- set f = 'a' if short else 'W' -%}
+    date_format({{ date }}, '%{{ f }}')
+{%- endmacro %}

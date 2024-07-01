@@ -21,17 +21,24 @@
 
 Development of `dbt-expectations` (and `dbt-date`) is funded by our amazing [sponsors](https://github.com/sponsors/calogica), including our **featured** sponsors:
 
-### aggua (<a href="https://www.aggua.io/" target="_blank">www.aggua.io</a>)
+<table width="80%">
+<tr>
 
-<a href="https://www.aggua.io/" target="_blank"><img width="80%" src="https://uploads-ssl.webflow.com/628f445aa439cdd1dfb160c0/62b4295accb569ec87d751a5_aggua-logo.svg"/></a>
+<td width="40%" valign="top" align="center">
+<p><a href="https://datacoves.com/product" target="_blank">datacoves.com</a></p>
+<p>
+<a href="https://datacoves.com/product" target="_blank">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/datacoves/dbt-coves/blob/main/images/datacoves-dark.png">
+  <img alt="Datacoves" src="https://github.com/datacoves/dbt-coves/blob/main/images/datacoves-light.png" width="150">
+</picture>
+</a>
+</p>
+</td>
 
-### Elementary (<a href="https://www.elementary-data.com/" target="_blank">www.elementary-data.com</a>)
+</tr>
 
-<a href="https://www.elementary-data.com/" target="_blank"><img width="80%" src="https://raw.githubusercontent.com/elementary-data/elementary/master/static/header_git.png"/></a>
-
-### re_data (<a href="https://www.getre.io/" target="_blank">www.getre.io</a>)
-
-<a href="https://www.getre.io/" target="_blank"><img width="30%" src="https://uploads-ssl.webflow.com/60bdbc7b0c4f5aa1568dc8cc/60df3224a3b3637230f335d6_REDATA%20LOGO%2011.svg"/></a>
+</table>
 
 ## Install
 
@@ -44,9 +51,18 @@ Include in `packages.yml`
 ```yaml
 packages:
   - package: calogica/dbt_expectations
-    version: [">=0.8.0", "<0.9.0"]
+    version: [">=0.9.0", "<0.10.0"]
     # <see https://github.com/calogica/dbt-expectations/releases/latest> for the latest version tag
 ```
+
+This package supports:
+
+* Postgres
+* Snowflake
+* BigQuery
+* DuckDB
+* Spark (experimental)
+* Trino
 
 For latest release, see [https://github.com/calogica/dbt-expectations/releases](https://github.com/calogica/dbt-expectations/releases)
 
@@ -138,7 +154,7 @@ For example, use `America/New_York` for East Coast Time.
 
 ### Multi-column
 
-- [expect_column_pair_values_A_to_be_greater_than_B](#expect_column_pair_values_A_to_be_greater_than_B)
+- [expect_column_pair_values_A_to_be_greater_than_B](#expect_column_pair_values_a_to_be_greater_than_b)
 - [expect_column_pair_values_to_be_equal](#expect_column_pair_values_to_be_equal)
 - [expect_column_pair_values_to_be_in_set](#expect_column_pair_values_to_be_in_set)
 - [expect_compound_columns_to_be_unique](#expect_compound_columns_to_be_unique)
@@ -246,7 +262,7 @@ tests:
       compare_row_condition: some_flag=false
 ```
 
-**Note**: You can also express a **tolerance** factor, either as an absolute tolerable difference, `tolerance`, or as a tolerable % difference `tolerance_percent`.
+**Note**: You can also express a **tolerance** factor, either as an absolute tolerable difference, `tolerance`, or as a tolerable % difference `tolerance_percent` expressed as a decimal (i.e 0.05 for 5%).
 
 ### [expect_table_column_count_to_be_between](macros/schema_tests/table_shape/expect_table_column_count_to_be_between.sql)
 
@@ -602,6 +618,7 @@ tests:
 Expect column entries to be strings that match a given regular expression. Valid matches can be found anywhere in the string, for example "[at]+" will identify the following strings as expected: "cat", "hat", "aa", "a", and "t", and the following strings as unexpected: "fish", "dog".
 
 Optional (keyword) arguments:
+
 - `is_raw` indicates the `regex` pattern is a "raw" string and should be escaped. The default is `False`.
 - `flags` is a string of one or more characters that are passed to the regex engine as flags (or parameters). Allowed flags are adapter-specific. A common flag is `i`, for case-insensitive matching. The default is no flags.
 
@@ -621,6 +638,7 @@ tests:
 Expect column entries to be strings that do NOT match a given regular expression. The regex must not match any portion of the provided string. For example, "[at]+" would identify the following strings as expected: "fish”, "dog”, and the following as unexpected: "cat”, "hat”.
 
 Optional (keyword) arguments:
+
 - `is_raw` indicates the `regex` pattern is a "raw" string and should be escaped. The default is `False`.
 - `flags` is a string of one or more characters that are passed to the regex engine as flags (or parameters). Allowed flags are adapter-specific. A common flag is `i`, for case-insensitive matching. The default is no flags.
 
@@ -640,6 +658,7 @@ tests:
 Expect the column entries to be strings that can be matched to either any of or all of a list of regular expressions. Matches can be anywhere in the string.
 
 Optional (keyword) arguments:
+
 - `is_raw` indicates the `regex` pattern is a "raw" string and should be escaped. The default is `False`.
 - `flags` is a string of one or more characters that are passed to the regex engine as flags (or parameters). Allowed flags are adapter-specific. A common flag is `i`, for case-insensitive matching. The default is no flags.
 
@@ -660,6 +679,7 @@ tests:
 Expect the column entries to be strings that do not match any of a list of regular expressions. Matches can be anywhere in the string.
 
 Optional (keyword) arguments:
+
 - `is_raw` indicates the `regex` pattern is a "raw" string and should be escaped. The default is `False`.
 - `flags` is a string of one or more characters that are passed to the regex engine as flags (or parameters). Allowed flags are adapter-specific. A common flag is `i`, for case-insensitive matching. The default is no flags.
 

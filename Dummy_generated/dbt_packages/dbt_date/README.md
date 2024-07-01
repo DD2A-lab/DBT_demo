@@ -2,14 +2,37 @@
 
 # dbt-date
 
-Extension package for [**dbt**](https://github.com/dbt-labs/dbt) to handle date logic and calendar functionality.
+`dbt-date` is an extension package for [**dbt**](https://github.com/dbt-labs/dbt) to handle common date logic and calendar functionality.
+
+## Featured Sponsors ❤️
+
+Development of `dbt-date` (and `dbt-expectations`) is funded by our amazing [sponsors](https://github.com/sponsors/calogica), including our **featured** sponsors:
+
+<table width="80%">
+<tr>
+<td width="40%" valign="top" align="center">
+<p><a href="https://datacoves.com/product" target="_blank">datacoves.com</a></p>
+<p>
+<a href="https://datacoves.com/product" target="_blank">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/datacoves/dbt-coves/blob/main/images/datacoves-dark.png">
+  <img alt="Datacoves" src="https://github.com/datacoves/dbt-coves/blob/main/images/datacoves-light.png" width="150">
+</picture>
+</a>
+</p>
+</td>
+
+</tr>
+</table>
+
+## Install
 
 Include in `packages.yml`
 
 ```yaml
 packages:
   - package: calogica/dbt_date
-    version: [">=0.7.0", "<0.8.0"]
+    version: [">=0.9.0", "<0.10.0"]
     # <see https://github.com/calogica/dbt-date/releases/latest> for the latest version tag
 ```
 
@@ -18,22 +41,9 @@ This package supports:
 * Postgres
 * Snowflake
 * BigQuery
-
-For other platforms, you will have to include a shim package for the platform, such as `spark-utils`, or `tsql-utils`.
-
-For example, in `packages.yml`, you will need to include the relevant package:
-
-```yaml
-  - package: dbt-labs/spark_utils
-    version: <latest or range>
-```
-
-And reference in the dispatch list for `dbt_date` in `dbt_project.yml`:
-
-```yaml
-vars:
-    dbt_date_dispatch_list: [spark_utils]
-```
+* DuckDB
+* Spark
+* Trino
 
 ## Variables
 
@@ -96,16 +106,21 @@ For example, use `America/New_York` for East Coast Time.
 
 * [get_fiscal_periods](#get_fiscal_periodsdates-year_end_month-week_start_day-shift_year1)
 
+## Utils
+
+* [date](#dateyear-month-day)
+* [datetime](#datetimeyear-month-day-hour0-minute0-second0-microsecond0-tznone)
+
 ## Documentation
 
 ### [get_base_dates](macros/get_base_dates.sql)(`start_date=None, end_date=None, n_dateparts=None, datepart="day"`)
 
 A wrapper around [`dbt_utils.date_spine`](https://github.com/dbt-labs/dbt-utils#date_spine-source) that allows you to specify either `start_date` and `end_date` for your date spine, or specify a number of periods (`n_dateparts`) in the past from today.
 
-Usage:
+Usage to build a daily date dimension for the years 2015 to 2022:
 
 ```sql
-{{ dbt_date.get_base_dates(start_date="2015-01-01", end_date="2022-12-31") }}
+{{ dbt_date.get_base_dates(start_date="2015-01-01", end_date="2023-01-01") }}
 ```
 
 or to build a daily date dimension for the last 3 years:
@@ -600,19 +615,19 @@ Returns the number of periods since a specified date or to `now`.
 Usage:
 
 ```sql
-{{ dbt_date.periods_since("my_date_column", period_name="day" }}
+{{ dbt_date.periods_since("my_date_column", period_name="day") }}
 ```
 
 or,
 
 ```sql
-{{ dbt_date.periods_since("my_timestamp_column", period_name="minute" }}
+{{ dbt_date.periods_since("my_timestamp_column", period_name="minute") }}
 ```
 
 or, optionally, you can override the default timezone:
 
 ```sql
-{{ dbt_date.periods_since("my_timestamp_column", period_name="minute", tz="UTC" }}
+{{ dbt_date.periods_since("my_timestamp_column", period_name="minute", tz="UTC") }}
 ```
 
 ### [round_timestamp](macros/calendar_date/round_timestamp.sql)(`timestamp`)
@@ -793,6 +808,30 @@ or, optionally, you can override the default timezone:
 
 ```sql
 {{ dbt_date.yesterday(tz="America/New_York") }} as date_yesterday
+```
+
+### [date](macros/_utils/modules_datetime.sql)(`year`, `month`, `day`)
+
+Reduces the boilerplate syntax required to produce a `date` object. This is not converted to a string to allow pythonic manipulation.
+
+Usage:
+```sql
+{% set date_object = dbt_date.date(1997, 9, 29) %}
+```
+
+### [datetime](macros/_utils/modules_datetime.sql)(`year`, `month`, `day`, `hour=0`, `minute=0`, `second=0`, `microsecond=0`, `tz=None`)
+
+Reduces the boilerplate syntax required to produce a `datetime` object. This is not converted to a string to allow pythonic manipulation.
+
+Usage:
+```sql
+{% set datetime_object = dbt_date.datetime(1997, 9, 29, 6, 14) %}
+```
+
+or, optionally, you can override the default timezone:
+
+```sql
+{% set datetime_object = dbt_date.datetime(1997, 9, 29, 6, 14, tz='America/New_York') %}
 ```
 
 ## Integration Tests (Developers Only)

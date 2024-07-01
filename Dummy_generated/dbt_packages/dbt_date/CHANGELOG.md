@@ -1,3 +1,35 @@
+# dbt-date v0.10.1
+## Fixes
+* Change marco month_name.sql by @flixflop in https://github.com/calogica/dbt-date/pull/123
+
+# dbt-date v0.10.0
+## New Features
+* Added Trino support by @damian3031 in https://github.com/calogica/dbt-date/pull/115
+
+# dbt-date v0.9.2
+## New Features
+* Add date() and datetime() short hand macros by @gregology in https://github.com/calogica/dbt-date/pull/112
+
+# dbt-date v0.9.1
+## Fixes
+* Fixed dataspine interval by @clausherther in https://github.com/calogica/dbt-date/pull/109
+
+# dbt-date v0.9.0
+## New Features
+* Add Spark support by @clausherther in https://github.com/calogica/dbt-date/pull/108
+
+**Full Changelog**: https://github.com/calogica/dbt-date/compare/0.8.1...0.9.0
+
+# dbt-date v0.8.0
+## New Features
+* Add support for dbt-duckdb to the dbt_date package by @jwills in https://github.com/calogica/dbt-date/pull/105
+
+## Docs
+* Update README.md by @JordanZimmitti in https://github.com/calogica/dbt-date/pull/99
+* Update README.md by @tgmof in https://github.com/calogica/dbt-date/pull/104
+
+**Full Changelog**: https://github.com/calogica/dbt-date/compare/0.7.2...0.8.0
+
 # dbt-date v0.7.2
 
 ## Fixes

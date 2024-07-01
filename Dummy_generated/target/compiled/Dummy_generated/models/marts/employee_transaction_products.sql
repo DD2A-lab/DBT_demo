@@ -70,8 +70,9 @@ FROM source
 ), orders as (SELECT date,
 employee_id,
 product_id,
-num_items
-FROM __dbt__cte__stg_dummy__enterprise_orders_base),
+sum(num_items) AS num_items
+FROM __dbt__cte__stg_dummy__enterprise_orders_base
+GROUP BY date, employee_id, product_id),
 employee as (
 	SELECT employee_id,
 	first_name,

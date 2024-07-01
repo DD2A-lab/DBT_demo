@@ -22,3 +22,22 @@
 {%- set f = 'FMMon' if short else 'FMMonth' -%}
     to_char({{ date }}, '{{ f }}')
 {%- endmacro %}
+
+
+{%- macro duckdb__month_name(date, short) -%}
+    {%- if short -%}
+    substr(monthname({{ date }}), 1, 3)
+    {%- else -%}
+    monthname({{ date }})
+    {%- endif -%}
+{%- endmacro %}
+
+{%- macro spark__month_name(date, short) -%}
+{%- set f = 'MMM' if short else 'MMMM' -%}
+    date_format({{ date }}, '{{ f }}')
+{%- endmacro %}
+
+{%- macro trino__month_name(date, short) -%}
+{%- set f = 'b' if short else 'M' -%}
+    date_format({{ date }}, '%{{ f }}')
+{%- endmacro %}

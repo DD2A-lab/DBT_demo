@@ -84,9 +84,9 @@ LEFT JOIN __dbt__cte__stg_dummy__fake_personal_info dt2 using(id)
 date AS order_date,
 employee_id,
 product_id,
-num_items
+sum(num_items) AS num_items
 FROM __dbt__cte__stg_dummy__enterprise_orders_base
-GROUP BY 1, 2, 3, 4),
+GROUP BY 1, 2, 3),
 companies as (
   SELECT id AS company_id,
   name AS company_name,
@@ -117,13 +117,10 @@ orders.product_id,
 products.product_category,
 products.product_name,
 products.product_price,
-orders.num_items
+orders.num_items,
+products.product_price * orders.num_items AS total_revenue
 FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id
 LEFT JOIN products ON orders.product_id = products.product_id
-
-
-
-  WHERE order_date > (SELECT MAX(order_date) FROM `macro-campaign-427608-v7`.`dbt_marta`.`companies_transaction_products`)
 

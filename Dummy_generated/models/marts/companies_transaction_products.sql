@@ -13,9 +13,9 @@ with orders as (SELECT
 date AS order_date,
 employee_id,
 product_id,
-num_items
+sum(num_items) AS num_items
 FROM {{ref('stg_dummy__enterprise_orders_base')}}
-GROUP BY 1, 2, 3, 4),
+GROUP BY 1, 2, 3),
 companies as (
   SELECT id AS company_id,
   name AS company_name,
@@ -46,7 +46,8 @@ orders.product_id,
 products.product_category,
 products.product_name,
 products.product_price,
-orders.num_items
+orders.num_items,
+products.product_price * orders.num_items AS total_revenue
 FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id

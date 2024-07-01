@@ -1,14 +1,73 @@
-<!--- Copy, paste, and uncomment the following headers as-needed for unreleased features
+# dbt-codegen v0.11.0
+
+## 🚨 Breaking change
+
+`include_data_types` parameter added to `generate_model_yaml` and behavior changed for `generate_source`. Both default to `true`
+and are lowercase to align with the dbt style guide. Scale & precision are **not** included. Previous logic for `generate_source` defaulted to `false` and the resulting data types were uppercase and included scale & precision ([#122](https://github.com/dbt-labs/dbt-codegen/pull/122)).
+
+[Dispatch](https://docs.getdbt.com/reference/dbt-jinja-functions/dispatch) can be used to utilize the column data type formatting of previous versions. Namely, by adding this macro to your project:
+```sql
+{% macro default__data_type_format_source(column) %}
+    {{ return(column.data_type | upper) }}
+{% endmacro %}
+```
+
+And then adding this within `dbt_project.yml`:
+```yaml
+dispatch:
+  - macro_namespace: codegen
+    search_order: ['my_project', 'codegen']
+```
+
+## What's Changed
+* GitHub Action to add/remove triage labels as-needed by @dbeatty10 in https://github.com/dbt-labs/dbt-codegen/pull/133
+* GitHub Action to close issues as stale as-needed by @dbeatty10 in https://github.com/dbt-labs/dbt-codegen/pull/134
+* Update README.md by @cohms in https://github.com/dbt-labs/dbt-codegen/pull/129
+* Remove hard-coded values for database and schema by @dbeatty10 in https://github.com/dbt-labs/dbt-codegen/pull/139
+* Instructions for the release process by @dbeatty10 in https://github.com/dbt-labs/dbt-codegen/pull/137
+* Add `include_data_types` argument to `generate_model_yaml` macro by @linbug in https://github.com/dbt-labs/dbt-codegen/pull/122
+
+## New Contributors
+* @cohms made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/129
+* @linbug made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/122
+
+**Full Changelog**: https://github.com/dbt-labs/dbt-codegen/compare/0.10.0...v0.10.0
+
+# dbt-codegen v0.10.0
+
+## What's Changed
+* added comments to verbose regex in generate_model_import_ctes by @graciegoheen in https://github.com/dbt-labs/dbt-codegen/pull/93
+* Feature/hackathon model generator by @fivetran-joemarkiewicz in https://github.com/dbt-labs/dbt-codegen/pull/83
+* Suggestion to include packages.yml example in README.md  by @Maayan-s in https://github.com/dbt-labs/dbt-codegen/pull/77
+* Add include_data_types flag to generate_source macro by @GSokol in https://github.com/dbt-labs/dbt-codegen/pull/76
+* Expected result of nested struct in BigQuery by @dbeatty10 in https://github.com/dbt-labs/dbt-codegen/pull/105
+* issue106/get_models helper macro by @erkanncelen in https://github.com/dbt-labs/dbt-codegen/pull/115
+* Feat/generate sources add database and schema by @jeremyholtzman in https://github.com/dbt-labs/dbt-codegen/pull/124
+
+## New Contributors
+* @fivetran-joemarkiewicz made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/83
+* @Maayan-s made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/77
+* @GSokol made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/76
+* @erkanncelen made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/115
+* @jeremyholtzman made their first contribution in https://github.com/dbt-labs/dbt-codegen/pull/124
+
+**Full Changelog**: https://github.com/dbt-labs/dbt-codegen/compare/0.9.0...0.10.0
+
+# dbt-codegen v0.9.0
+
+# dbt-codegen v0.8.1
+
+# dbt-codegen v0.8.0
+
 # Unreleased
 ## Breaking changes
 ## New features
-- XXX ([#XXX](https://github.com/dbt-labs/dbt-codegen/issues/XXX), [#XXX](https://github.com/dbt-labs/dbt-codegen/pull/XXX))
-## Fixes
 ## Quality of life
+- Now uses `print` instead of `log` to output the generated text into the console. This enables you to invoke dbt with the `--quiet` flag and directly pipe the codegen output into a new file, ending up with valid yaml
+
 ## Under the hood
 ## Contributors:
-- [@handle](https://github.com/handle) (#XXX)
---->
+- [@JorgenG](https://github.com/JorgenG) (#86)
 
 # dbt-codegen v0.7.0
 
@@ -22,7 +81,7 @@
 - Add optional `name` arg to `generate_source` ([#64](https://github.com/dbt-labs/dbt-codegen/issues/64), [#66](https://github.com/dbt-labs/dbt-codegen/pull/66))
 
 ## Fixes
-- `generate_model_yaml` now correctly handles nested (`STRUCT`) fields in BigQuery ([#27](https://github.com/dbt-labs/dbt-codegen/issues/27), [#54](https://github.com/dbt-labs/dbt-codegen/pull/54))
+- `generate_model_yaml` now correctly handles nested `STRUCT` fields in BigQuery ([#27](https://github.com/dbt-labs/dbt-codegen/issues/27), [#54](https://github.com/dbt-labs/dbt-codegen/pull/54))
 
 ## Contributors:
 - [@rahulj51](https://github.com/rahulj51) (#51)

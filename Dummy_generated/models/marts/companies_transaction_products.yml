@@ -2,18 +2,31 @@ version: 2
 
 models:
   - name: companies_transaction_products
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - order_date
+            - company_id
+            - product_id
+          severity: warn
     description: "Providing full transaction information with company and product characteristics"
     columns:
       - name: order_date
         description: "Date_of_order"
       - name: company_id
         description: "Unique identifier of the company"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: INT64
       - name: company_name
         description: "Company name"
       - name: company_purpose
         description: "Purpose of the company"
       - name: product_id
         description: "Unique identifier of the product"
+        tests:
+          - not_null
       - name: product_category
         description: "Category of the product"
       - name: product_name
@@ -22,3 +35,12 @@ models:
         description: "Price of the product"
       - name: num_items
         description: "Number of items"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+      - name: total_revenue
+        description: "product_price * num_items"
+        tests:
+          - dbt_utils.expression_is_true:
+                expression: ">= product_price"
+

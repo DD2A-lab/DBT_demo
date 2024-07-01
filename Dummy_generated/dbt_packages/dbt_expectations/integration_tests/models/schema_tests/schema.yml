@@ -17,19 +17,21 @@ models:
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "[A-Z]"
               flags: i
+              config:
+                enabled: "{{ target.type not in ['bigquery', 'spark' ] }}"
             # match all uppercase with inline case-insensitive flag and case-insensitive flag parameter (where implemented)
             # check that adapters handling flags by inlining them don't break because of the flag duplication
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "(?i)[A-Z]"
               flags: i
               config:
-                enabled: "{{ target.type == 'bigquery' }}"
+                enabled: "{{ target.type in ['bigquery', 'trino'] }}"
             # match all uppercase, case-sensitive (where implemented), should fail
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "[A-Z]"
               flags: c
               config:
-                enabled: "{{ target.type in ['postgres', 'snowflake', 'redshift' ] }}"
+                enabled: "{{ target.type not in ['bigquery', 'spark', 'trino'] }}"
                 error_if: "=0"
                 warn_if: "<4"
             # do not match other non-email string, should pass
@@ -63,12 +65,14 @@ models:
           - dbt_expectations.expect_column_values_to_match_regex_list:
               regex_list: ["[A-G]", "[H-Z]"]
               flags: i
+              config:
+                enabled: "{{ target.type not in ['bigquery', 'spark' ] }}"
             # match all uppercase, but match case-sensitive (where implemented), should fail
           - dbt_expectations.expect_column_values_to_match_regex_list:
               regex_list: ["[A-G]", "[H-Z]"]
               flags: c
               config:
-                enabled: "{{ target.type in ['postgres', 'snowflake', 'redshift' ] }}"
+                enabled: "{{ target.type not in ['bigquery', 'spark', 'trino'] }}"
                 error_if: "=0"
                 warn_if: "<4"
             # match email address or other string
@@ -98,12 +102,15 @@ models:
           - dbt_expectations.expect_column_values_to_not_match_regex_list:
               regex_list: ["[A-Z]", "[0-9]"]
               flags: i
+              config:
+                enabled: "{{ target.type not in ['bigquery', 'spark' ] }}"
             # do not match all uppercase and numbers, case-insensitive
           - dbt_expectations.expect_column_values_to_not_match_regex_list:
               regex_list: ["[A-Z]", "[0-9]"]
               flags: i
               match_on: all
               config:
+                enabled: "{{ target.type not in ['bigquery', 'spark' ] }}"
                 error_if: "=0"
                 warn_if: "<4"
             # match '@' anywhere in string
@@ -144,15 +151,19 @@ models:
               config:
                 error_if: "=0"
                 warn_if: "<4"
+
       - name: postal_code_5
         tests:
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "^\\d{5}"
               is_raw: True
+              config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "^\\d{55}"
               is_raw: True
               config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
                 error_if: "=0"
                 warn_if: "<4"
           - dbt_expectations.expect_column_values_to_not_match_regex:
@@ -162,19 +173,25 @@ models:
               regex: "^\\d{5}"
               is_raw: True
               config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
                 error_if: "=0"
                 warn_if: "<4"
           - dbt_expectations.expect_column_values_to_match_regex_list:
               regex_list: ["^\\d{5}"]
               is_raw: True
+              config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
           - dbt_expectations.expect_column_values_to_match_regex_list:
               regex_list: ["^\\d{5}", "@[^.]*"]
               is_raw: True
+              config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
           - dbt_expectations.expect_column_values_to_match_regex_list:
               regex_list: ["^\\d{5}", "@[^.]*"]
               is_raw: True
               match_on: all
               config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
                 error_if: "=0"
                 warn_if: "<4"
           - dbt_expectations.expect_column_values_to_not_match_regex_list:
@@ -183,11 +200,14 @@ models:
           - dbt_expectations.expect_column_values_to_not_match_regex_list:
               regex_list: ["^\\d{5}", "@[^.]*"]
               is_raw: True
+              config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
           - dbt_expectations.expect_column_values_to_not_match_regex_list:
               regex_list: ["^\\d{5}", "@[^.]*"]
               is_raw: True
               match_on: all
               config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
                 error_if: "=0"
                 warn_if: "<4"
       - name: postal_code_5_3
@@ -195,10 +215,13 @@ models:
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "^\\d{5}-\\d{3}"
               is_raw: True
+              config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
           - dbt_expectations.expect_column_values_to_match_regex:
               regex: "^\\d{5}-\\d{9}"
               is_raw: True
               config:
+                severity: "{{ 'warn' if target.type in ['spark' ] else 'error' }}"
                 error_if: "=0"
                 warn_if: "<4"
 
@@ -219,7 +242,7 @@ models:
       - dbt_expectations.expect_row_values_to_have_data_for_every_n_datepart:
           date_col: date_day
           date_part: day
-          exclusion_condition: not(date_day = '2021-10-19')
+          exclusion_condition: not(date_day = cast('2021-10-19' as date))
       - dbt_expectations.expect_row_values_to_have_data_for_every_n_datepart:
           date_col: date_day
           date_part: day
@@ -306,14 +329,14 @@ models:
       - name: row_value
         tests:
           - dbt_expectations.expect_column_distinct_count_to_equal:
-              row_condition: date_day = {{ dbt_date.yesterday() }}
+              row_condition: cast(date_day as date) = {{ dbt_date.yesterday() }}
               value: 10
           - dbt_expectations.expect_column_distinct_count_to_be_greater_than:
-              row_condition: date_day = {{ dbt_date.yesterday() }}
+              row_condition: cast(date_day as date) = {{ dbt_date.yesterday() }}
               value: 1
           - dbt_expectations.expect_column_distinct_count_to_be_less_than:
               value: 11
-              row_condition: date_day = {{ dbt_date.yesterday() }}
+              row_condition: cast(date_day as date) = {{ dbt_date.yesterday() }}
 
 
 
@@ -394,7 +417,7 @@ models:
           row_condition: 1=1
           compare_row_condition: 1=1
       - dbt_expectations.expect_table_column_count_to_equal:
-          value: 8
+          value: 9
       - dbt_expectations.expect_table_column_count_to_be_between:
           min_value: 1
           max_value: 10
@@ -405,9 +428,9 @@ models:
       - dbt_expectations.expect_table_columns_to_contain_set:
           column_list: ["col_numeric_b", "col_string_a"]
       - dbt_expectations.expect_table_columns_to_match_set:
-          column_list: ["idx", "date_col", "col_numeric_a", "col_numeric_b", "col_string_a", "col_string_b", "col_null", "col_null_2"]
+          column_list: ["idx", "date_col", "col_numeric_a", "col_numeric_b", "col_string_a", "col_string_b", "col_null", "col_null_2", "col_numeric_a_plus_b"]
       - dbt_expectations.expect_table_columns_to_match_ordered_list:
-          column_list: ["idx", "date_col", "col_numeric_a", "col_numeric_b", "col_string_a", "col_string_b", "col_null", "col_null_2"]
+          column_list: ["idx", "date_col", "col_numeric_a", "col_numeric_b", "col_string_a", "col_string_b", "col_null", "col_null_2", "col_numeric_a_plus_b"]
       - dbt_expectations.expect_table_column_count_to_equal_other_table:
           compare_model: ref("data_test")
       - dbt_expectations.expect_table_columns_to_not_contain_set:
@@ -454,7 +477,13 @@ models:
       - dbt_expectations.expect_multicolumn_sum_to_equal:
           column_list: ["col_numeric_a", "col_numeric_b"]
           sum_total: 4
-
+      - dbt_expectations.expect_multicolumn_sum_to_equal:
+          column_list: ["col_numeric_a", "col_numeric_b"]
+          sum_total: col_numeric_a_plus_b
+      - dbt_expectations.expect_multicolumn_sum_to_equal:
+          column_list: ["col_numeric_a", "col_numeric_b"]
+          sum_total: col_numeric_a_plus_b
+          group_by: [idx]
 
 
     columns:

@@ -47,6 +47,38 @@ coalesce(array_length((select regexp_matches({{ source_value }}, '{{ regexp }}',
 regexp_instr({{ source_value }}, '{{ regexp }}', {{ position }}, {{ occurrence }}, 0, '{{ flags }}')
 {% endmacro %}
 
+{% macro duckdb__regexp_instr(source_value, regexp, position, occurrence, is_raw, flags) %}
+{% if flags %}{{ dbt_expectations._validate_flags(flags, 'ciep') }}{% endif %}
+regexp_matches({{ source_value }}, '{{ regexp }}', '{{ flags }}')
+{% endmacro %}
+
+{% macro spark__regexp_instr(source_value, regexp, position, occurrence, is_raw, flags) %}
+{% if is_raw or flags %}
+    {{ exceptions.warn(
+            "is_raw and flags options are not supported for this adapter "
+            ~ "and are being ignored."
+    ) }}
+{% endif %}
+length(regexp_extract({{ source_value }}, '{{ regexp }}', 0))
+{% endmacro %}
+
+{% macro trino__regexp_instr(source_value, regexp, position, occurrence, is_raw, flags) %}
+    {% if flags %}
+        {{ dbt_expectations._validate_re2_flags(flags) }}
+        {# Trino prepends "(?flags)" to set flags for current group #}
+        {%- set regexp = "(?" ~ flags ~ ")" ~ regexp -%}
+    {% endif %}
+    {% if is_raw %}
+        {{ exceptions.warn(
+                "is_raw option is not supported for this adapter "
+                ~ "and is being ignored."
+        ) }}
+    {% endif %}
+    {%- set regexp_query = "regexp_position(" ~ source_value ~ ", '" ~ regexp ~ "', " ~ position ~ ", " ~ occurrence ~ ")" -%}
+    {# Trino regexp_position returns -1 if not found. Change it to 0, to be consistent with other adapters #}
+    if({{ regexp_query}} = -1, 0, {{ regexp_query}})
+{% endmacro %}
+
 {% macro _validate_flags(flags, alphabet) %}
 {% for flag in flags %}
     {% if flag not in alphabet %}
@@ -74,7 +106,7 @@ regexp_instr({{ source_value }}, '{{ regexp }}', {{ position }}, {{ occurrence }
 {% if not is_match %}
     {# Using raise_compiler_error causes disabled tests with invalid flags to fail compilation #}
     {{ exceptions.warn(
-        "flags " ~ flags ~ " isn't a valid re2 flag pattern" 
+        "flags " ~ flags ~ " isn't a valid re2 flag pattern"
     ) }}
 {% endif %}
 {% endmacro %}

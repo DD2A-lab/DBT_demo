@@ -13,3 +13,11 @@
 {%- macro redshift__day_of_year(date) -%}
     cast({{ dbt_date.date_part('dayofyear', date) }} as {{ dbt.type_bigint() }})
 {%- endmacro %}
+
+{%- macro spark__day_of_year(date) -%}
+    dayofyear({{ date }})
+{%- endmacro %}
+
+{%- macro trino__day_of_year(date) -%}
+    {{ dbt_date.date_part('day_of_year', date) }}
+{%- endmacro %}

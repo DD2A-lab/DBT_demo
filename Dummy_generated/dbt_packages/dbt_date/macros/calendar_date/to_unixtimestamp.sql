@@ -13,3 +13,11 @@
 {%- macro bigquery__to_unixtimestamp(timestamp) -%}
     unix_seconds({{ timestamp }})
 {%- endmacro %}
+
+{%- macro spark__to_unixtimestamp(timestamp) -%}
+    unix_timestamp({{ timestamp }})
+{%- endmacro %}
+
+{%- macro trino__to_unixtimestamp(timestamp) -%}
+    to_unixtime({{ timestamp }} AT TIME ZONE 'UTC')
+{%- endmacro %}

@@ -15,6 +15,10 @@
     timestamp without time zone
 {%- endmacro %}
 
+{% macro trino__type_timestamp() -%}
+    timestamp(3)
+{%- endmacro %}
+
 {# datetime  -------------------------------------------------     #}
 
 {% macro type_datetime() -%}
@@ -32,4 +36,16 @@
 
 {% macro postgres__type_datetime() -%}
     timestamp without time zone
+{%- endmacro %}
+
+{% macro duckdb__type_datetime() -%}
+    timestamp
+{%- endmacro %}
+
+{% macro spark__type_datetime() -%}
+    timestamp
+{%- endmacro %}
+
+{% macro trino__type_datetime() -%}
+    timestamp(3)
 {%- endmacro %}
