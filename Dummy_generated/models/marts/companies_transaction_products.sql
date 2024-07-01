@@ -37,8 +37,8 @@ employees as (
   company_id
   FROM {{ref('int_dummy__customer_info')}}
   GROUP BY 1, 2
-)
-SELECT orders.order_date,
+), joined_together as
+(SELECT orders.order_date,
 companies.company_id,
 companies.company_name,
 companies.company_purpose,
@@ -51,7 +51,25 @@ products.product_price * orders.num_items AS total_revenue
 FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id
-LEFT JOIN products ON orders.product_id = products.product_id
+LEFT JOIN products ON orders.product_id = products.product_id)
+SELECT order_date,
+company_id,
+company_name,
+company_purpose,
+product_id,
+product_category,
+product_name,
+{%- for cat in dbt_utils.get_column_values(table = ref('stg_dummy__products_base'), column = 'category') %}
+SUM(IF(product_category = '{{ cat }}', total_revenue, 0)) AS total_sold_{{cat.lower()}}{% if not loop.last %},{% endif -%}
+{% endfor %}
+FROM joined_together
+GROUP BY order_date,
+company_id,
+company_name,
+company_purpose,
+product_id,
+product_category,
+product_name
 
 {% if is_incremental() %}
 

@@ -36,17 +36,6 @@ slogan,
 purpose,
 date_added
 FROM source
-),  __dbt__cte__stg_dummy__products_base as (
-
-
-with source as (SELECT *
-FROM `macro-campaign-427608-v7`.`dbt_marta`.`products_base`)
-SELECT id,
-category,
-name,
-price,
-date_added
-FROM source
 ),  __dbt__cte__stg_dummy__employees_base as (
 
 
@@ -113,7 +102,7 @@ products as (
   category AS product_category,
   name AS product_name,
   price AS product_price
-  FROM __dbt__cte__stg_dummy__products_base
+  FROM `macro-campaign-427608-v7`.`dbt_marta`.`stg_dummy__products_base`
   GROUP BY 1, 2, 3, 4
 ),
 employees as (
@@ -121,8 +110,8 @@ employees as (
   company_id
   FROM __dbt__cte__int_dummy__customer_info
   GROUP BY 1, 2
-)
-SELECT orders.order_date,
+), joined_together as
+(SELECT orders.order_date,
 companies.company_id,
 companies.company_name,
 companies.company_purpose,
@@ -135,7 +124,30 @@ products.product_price * orders.num_items AS total_revenue
 FROM orders
 LEFT JOIN employees using(employee_id)
 LEFT JOIN companies ON employees.company_id = companies.company_id
-LEFT JOIN products ON orders.product_id = products.product_id
+LEFT JOIN products ON orders.product_id = products.product_id)
+SELECT order_date,
+company_id,
+company_name,
+company_purpose,
+product_id,
+product_category,
+product_name,
+SUM(IF(product_category = 'Garden', total_revenue, 0)) AS total_sold_garden,
+SUM(IF(product_category = 'Outdoors', total_revenue, 0)) AS total_sold_outdoors,
+SUM(IF(product_category = 'Tools', total_revenue, 0)) AS total_sold_tools,
+SUM(IF(product_category = 'Games', total_revenue, 0)) AS total_sold_games,
+SUM(IF(product_category = 'Home', total_revenue, 0)) AS total_sold_home,
+SUM(IF(product_category = 'Sports', total_revenue, 0)) AS total_sold_sports,
+SUM(IF(product_category = 'Kids', total_revenue, 0)) AS total_sold_kids,
+SUM(IF(product_category = 'Beauty', total_revenue, 0)) AS total_sold_beauty
+FROM joined_together
+GROUP BY order_date,
+company_id,
+company_name,
+company_purpose,
+product_id,
+product_category,
+product_name
 
 
     );

@@ -1,5 +1,5 @@
 {{
-	config(materialized='ephemeral',
+	config(materialized='view',
 	tags=['base-table'])
 }}
 
