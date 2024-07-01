@@ -28524,3 +28524,107 @@ product_name
 [0m16:52:44.893927 [debug] [MainThread]: Command `dbt run` succeeded at 16:52:44.892929 after 12.36 seconds
 [0m16:52:44.902913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012952A24190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001294C499CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001295158D150>]}
 [0m16:52:44.904418 [debug] [MainThread]: Flushing usage events
+[0m17:17:26.633247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A942F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A940910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A697F50>]}
+
+
+============================== 17:17:26.645072 | 82d6f061-ac86-4f44-a50a-df329d5d8125 ==============================
+[0m17:17:26.645072 [info ] [MainThread]: Running with dbt=1.6.17
+[0m17:17:26.647473 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt snapshot', 'send_anonymous_usage_stats': 'True'}
+[0m17:17:27.926577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '82d6f061-ac86-4f44-a50a-df329d5d8125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A94CBD0>]}
+[0m17:17:27.946528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '82d6f061-ac86-4f44-a50a-df329d5d8125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A93E0D0>]}
+[0m17:17:27.948523 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m17:17:28.018412 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m17:17:28.871035 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m17:17:28.872033 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_companies_transaction_products.sql
+[0m17:17:28.873030 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_employee_transaction_product.sql
+[0m17:17:28.941846 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, companies_transaction_products
+[0m17:17:28.942781 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, companies_transaction_products
+[0m17:17:28.944781 [info ] [MainThread]: dbt_faker: here! dbt_marta, companies_transaction_products
+[0m17:17:28.975698 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two snapshots with the name "snapshot__fake_products".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for ref("snapshot__fake_products").
+  
+  To fix this, change the name of one of these resources:
+  - snapshot.Dummy_generated.snapshot__fake_products (snapshots\snapshot_companies_transaction_products.sql)
+  - snapshot.Dummy_generated.snapshot__fake_products (snapshots\snapshot__fake_products.sql)
+[0m17:17:28.978687 [debug] [MainThread]: Command `dbt snapshot` failed at 17:17:28.978687 after 2.40 seconds
+[0m17:17:28.979685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A9C7490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761CBC6CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002761A1D3E50>]}
+[0m17:17:28.980682 [debug] [MainThread]: Flushing usage events
+[0m17:18:24.608219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B506B0AF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B506BC7F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5074095D0>]}
+
+
+============================== 17:18:24.613205 | a4ec29b5-6260-4937-a0e2-d16194ac38ed ==============================
+[0m17:18:24.613205 [info ] [MainThread]: Running with dbt=1.6.17
+[0m17:18:24.615200 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt snapshot', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:25.246511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4ec29b5-6260-4937-a0e2-d16194ac38ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B507402850>]}
+[0m17:18:25.267456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4ec29b5-6260-4937-a0e2-d16194ac38ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5088248D0>]}
+[0m17:18:25.269457 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m17:18:25.337298 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m17:18:25.807042 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m17:18:25.808040 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_companies_transaction_products.sql
+[0m17:18:25.809008 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_employee_transaction_product.sql
+[0m17:18:25.867880 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, companies_transaction_products
+[0m17:18:25.868847 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, companies_transaction_products
+[0m17:18:25.870164 [info ] [MainThread]: dbt_faker: here! dbt_marta, companies_transaction_products
+[0m17:18:25.908065 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, employee_transaction_products
+[0m17:18:25.911059 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, employee_transaction_products
+[0m17:18:25.913054 [info ] [MainThread]: dbt_faker: here! dbt_marta, employee_transaction_products
+[0m17:18:25.920034 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Snapshot 'snapshot.Dummy_generated.snapshot__companies_transaction_products' (snapshots\snapshot_companies_transaction_products.sql) depends on a source named 'dbt_marta.companies_transaction_products' which was not found
+[0m17:18:25.923056 [debug] [MainThread]: Command `dbt snapshot` failed at 17:18:25.923056 after 1.35 seconds
+[0m17:18:25.924059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5074095D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B506697090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B506B37A50>]}
+[0m17:18:25.926019 [debug] [MainThread]: Flushing usage events
+[0m17:19:23.917087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014855ACCE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148555ACC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014855B3E110>]}
+
+
+============================== 17:19:23.922112 | 30698bfe-4bcc-41e3-a9af-51579d8b1f93 ==============================
+[0m17:19:23.922112 [info ] [MainThread]: Running with dbt=1.6.17
+[0m17:19:23.924072 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt snapshot', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:19:24.532484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '30698bfe-4bcc-41e3-a9af-51579d8b1f93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001485781F7D0>]}
+[0m17:19:24.554424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '30698bfe-4bcc-41e3-a9af-51579d8b1f93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014857842D90>]}
+[0m17:19:24.556420 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m17:19:24.624239 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m17:19:25.077258 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m17:19:25.078256 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_employee_transaction_product.sql
+[0m17:19:25.079227 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_companies_transaction_products.sql
+[0m17:19:25.141088 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, employee_transaction_products
+[0m17:19:25.142076 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, employee_transaction_products
+[0m17:19:25.144051 [info ] [MainThread]: dbt_faker: here! dbt_marta, employee_transaction_products
+[0m17:19:25.189928 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, companies_transaction_products
+[0m17:19:25.192959 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, companies_transaction_products
+[0m17:19:25.193920 [info ] [MainThread]: dbt_faker: here! dbt_marta, companies_transaction_products
+[0m17:19:25.198905 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Snapshot 'snapshot.Dummy_generated.snapshot__employee_transaction_products' (snapshots\snapshot_employee_transaction_product.sql) depends on a source named 'dbt_marta.employee_transaction_products' which was not found
+[0m17:19:25.200900 [debug] [MainThread]: Command `dbt snapshot` failed at 17:19:25.200900 after 1.32 seconds
+[0m17:19:25.201926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000148555A4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014856400750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014855A0E5D0>]}
+[0m17:19:25.203897 [debug] [MainThread]: Flushing usage events
+[0m17:19:56.811782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019484F6AF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019484FD50D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019484AAFF50>]}
+
+
+============================== 17:19:56.816769 | f08686d6-0e12-42c2-bd21-75b7a69f8544 ==============================
+[0m17:19:56.816769 [info ] [MainThread]: Running with dbt=1.6.17
+[0m17:19:56.817766 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:/Users/fajlh/.dbt', 'log_path': 'C:\\Users\\fajlh\\OneDrive\\Documents\\DBT_demo\\DBT_demo\\Dummy_generated\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt snapshot', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:19:57.435012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f08686d6-0e12-42c2-bd21-75b7a69f8544', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019486508D50>]}
+[0m17:19:57.452964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f08686d6-0e12-42c2-bd21-75b7a69f8544', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019486508D50>]}
+[0m17:19:57.454929 [info ] [MainThread]: Registered adapter: bigquery=1.6.1
+[0m17:19:57.522749 [debug] [MainThread]: checksum: 5068fe71dce20d17d52958fa9cd93ea8f20705f4dc29725ea3e5886531e90d9e, vars: {}, profile: , target: , version: 1.6.17
+[0m17:19:57.970580 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m17:19:57.971578 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_companies_transaction_products.sql
+[0m17:19:57.972575 [debug] [MainThread]: Partial parsing: added file: Dummy_generated://snapshots\snapshot_employee_transaction_product.sql
+[0m17:19:58.029423 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, companies_transaction_products
+[0m17:19:58.031390 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, companies_transaction_products
+[0m17:19:58.032386 [info ] [MainThread]: dbt_faker: here! dbt_marta, companies_transaction_products
+[0m17:19:58.066295 [info ] [MainThread]: dbt_faker has intercepted the source call! dbt_marta, employee_transaction_products
+[0m17:19:58.069289 [info ] [MainThread]: dbt_faker is enabled! dbt_marta, employee_transaction_products
+[0m17:19:58.072279 [info ] [MainThread]: dbt_faker: here! dbt_marta, employee_transaction_products
+[0m17:19:58.077269 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Snapshot 'snapshot.Dummy_generated.snapshot__companies_transaction_products' (snapshots\snapshot_companies_transaction_products.sql) depends on a source named 'dbt_marta.companies_transaction_products' which was not found
+[0m17:19:58.080260 [debug] [MainThread]: Command `dbt snapshot` failed at 17:19:58.079259 after 1.31 seconds
+[0m17:19:58.081255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194855FFC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019484FD5090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019484FD4690>]}
+[0m17:19:58.083250 [debug] [MainThread]: Flushing usage events
